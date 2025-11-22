@@ -40,7 +40,7 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
   return (
     <>
       <Head>
-        <title>Contact | {businessSettings.brandName}</title>
+        <title>{`Contact | ${businessSettings.brandName}`}</title>
         <meta
           name="description"
           content={`Get in touch with ${businessSettings.brandName} - Web developer available for new projects and opportunities`}

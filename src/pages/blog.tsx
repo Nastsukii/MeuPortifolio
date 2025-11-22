@@ -31,9 +31,9 @@ const Blog = ({ businessSettings, generalSettings }: BlogProps) => {
   if (!isSignedIn) {
     return (
       <>
-        <Head>
-          <title>Blog | {businessSettings.brandName}</title>
-        </Head>
+      <Head>
+        <title>{`Blog | ${businessSettings.brandName}`}</title>
+      </Head>
         <div className="min-h-screen flex items-center justify-center px-6">
           <div className="text-center max-w-md">
             <div className="mb-6">
@@ -61,7 +61,7 @@ const Blog = ({ businessSettings, generalSettings }: BlogProps) => {
   return (
     <>
       <Head>
-        <title>Blog | {businessSettings.brandName}</title>
+        <title>{`Blog | ${businessSettings.brandName}`}</title>
         <meta
           name="description"
           content={`Timeline da carreira de ${businessSettings.brandName} - Desenvolvedor web`}

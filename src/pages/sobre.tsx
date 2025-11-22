@@ -17,7 +17,7 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
   return (
     <>
       <Head>
-        <title>About | {businessSettings.brandName}</title>
+        <title>{`About | ${businessSettings.brandName}`}</title>
         <meta
           name="description"
           content={`Learn more about ${businessSettings.brandName} - ${businessSettings.brandDescription}`}

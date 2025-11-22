@@ -283,7 +283,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
   return (
     <>
       <Head>
-        <title>{t('projects.title')} | {businessSettings.brandName}</title>
+        <title>{`${t('projects.title')} | ${businessSettings.brandName}`}</title>
         <meta
           name="description"
           content={`Confira os projetos desenvolvidos por ${businessSettings.brandName} - Desenvolvedor web especializado em soluções modernas`}

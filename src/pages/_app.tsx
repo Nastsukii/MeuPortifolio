@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import * as gtag from '@/lib/gtag';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import { ClerkProvider } from '@clerk/nextjs';
 
 function App({ Component, pageProps }: AppProps) {
@@ -29,6 +30,9 @@ function App({ Component, pageProps }: AppProps) {
     return (
       <LanguageProvider>
         <ThemeProvider>
+          <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+          </Head>
           <Layout>
             <Component {...pageProps} />
           </Layout>
@@ -40,6 +44,9 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <LanguageProvider>
       <ThemeProvider>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
         <GoogleAnalytics />
         {/* @ts-expect-error */}
         <ClerkProvider 
