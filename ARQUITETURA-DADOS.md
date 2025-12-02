@@ -39,7 +39,7 @@ content/data/
     },
     "photo": {
       "url": "/img/foto perfil.jpeg",
-      "alt": "Guilherme Cirelli Lopes",
+      "alt": "Luiz Antonio Comiran Bueno",
       "width": 400,
       "height": 400
     }
@@ -86,7 +86,7 @@ import statsData from '../../../content/data/stats.json';
   "about": {
     "photo": {
       "url": "/img/perfil2.jpeg",
-      "alt": "Guilherme Cirelli",
+      "alt": "Luiz Antonio Comiran Bueno",
       "width": 300,
       "height": 300
     },
@@ -247,7 +247,7 @@ import timelineData from '../../../content/data/timeline.json';
       },
       {
         "type": "whatsapp",
-        "url": "https://wa.me/5543991575781",
+        "url": "https://wa.me/5545999383320",
         "icon": "whatsapp",
         "label": "WhatsApp"
       }

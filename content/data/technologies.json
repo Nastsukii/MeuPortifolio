@@ -2,34 +2,14 @@
   "titleEmoji": "",
   "technologies": [
     {
-      "id": "nextjs",
-      "nameKey": "home.technologies.nextjs",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-gray-900 dark:border-gray-100 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "react",
-      "nameKey": "home.technologies.react",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-cyan-500 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "javascript",
-      "nameKey": "home.technologies.javascript",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-yellow-500 text-gray-900 dark:text-white"
-    },
-    {
       "id": "nodejs",
       "nameKey": "home.technologies.nodejs",
       "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-green-500 text-gray-900 dark:text-white"
     },
     {
-      "id": "express",
-      "nameKey": "home.technologies.express",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-gray-700 dark:border-gray-400 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "apis",
-      "nameKey": "home.technologies.apis",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-purple-500 text-gray-900 dark:text-white"
+      "id": "javascript",
+      "nameKey": "home.technologies.javascript",
+      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-yellow-500 text-gray-900 dark:text-white"
     },
     {
       "id": "html5",
@@ -52,14 +32,9 @@
       "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-purple-600 text-gray-900 dark:text-white"
     },
     {
-      "id": "netlify",
-      "nameKey": "home.technologies.netlify",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-teal-500 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "trello",
-      "nameKey": "home.technologies.trello",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-blue-600 text-gray-900 dark:text-white"
+      "id": "react",
+      "nameKey": "home.technologies.react",
+      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-cyan-500 text-gray-900 dark:text-white"
     }
   ]
 }

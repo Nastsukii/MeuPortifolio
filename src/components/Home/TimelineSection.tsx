@@ -24,12 +24,12 @@ export const TimelineSection = () => {
               className="flex gap-6 items-start"
             >
               <div className="flex-shrink-0 w-24 pt-1">
-                <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full">
+                <span className="text-sm font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
                   {t(item.dateKey)}
                 </span>
               </div>
-              <div className="flex-1 pb-2 border-l-2 border-blue-200 dark:border-blue-800 pl-6 relative">
-                <div className="absolute -left-2 top-2 w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full border-4 border-white dark:border-gray-900"></div>
+              <div className="flex-1 pb-2 border-l-2 border-primary/30 dark:border-primary/20 pl-6 relative">
+                <div className="absolute -left-2 top-2 w-4 h-4 bg-primary rounded-full border-4 border-white dark:border-gray-900 neon-shadow"></div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {t(item.titleKey)}
                 </h3>
@@ -41,7 +41,7 @@ export const TimelineSection = () => {
         <div className="text-center">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:gap-3 font-semibold text-lg transition-all duration-200"
+            className="inline-flex items-center gap-2 text-primary hover:gap-3 font-semibold text-lg transition-all duration-200"
           >
             {t('home.timeline.viewAll')}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

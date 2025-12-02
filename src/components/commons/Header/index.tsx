@@ -48,9 +48,9 @@ export const Header = () => {
       {/* Download Resume Button */}
       <div className="flex items-center">
         <a
-          href="/files/Curriculo 02072025.pdf"
-          download="Curriculo_Guilherme_Cirelli.pdf"
-          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+          href="/files/Curriculo Pt-br Luiz Antonio.pdf"
+          download="Curriculo_Luiz_Antonio_Comiran_Bueno.pdf"
+          className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-2 px-4 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg neon-shadow"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -70,7 +70,7 @@ export const Header = () => {
           href="/"
           className={`px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/'
-              ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
@@ -80,7 +80,7 @@ export const Header = () => {
           href="/sobre"
           className={`px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/sobre'
-              ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
@@ -90,7 +90,7 @@ export const Header = () => {
           href="/projetos"
           className={`px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/projetos'
-              ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
@@ -100,7 +100,7 @@ export const Header = () => {
           href="/blog"
           className={`px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/blog'
-              ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
@@ -110,7 +110,7 @@ export const Header = () => {
           href="/contato"
           className={`px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/contato'
-              ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >

@@ -153,5 +153,5 @@ Os contatos recebem a tag `contato-site` automaticamente, facilitando segmentaç
 ---
 
 **Última atualização:** $(date)
-**Desenvolvido por:** Guilherme Cirelli Lopes
+**Desenvolvido por:** Luiz Antonio Comiran Bueno
 

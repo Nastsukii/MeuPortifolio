@@ -21,7 +21,7 @@ export const Inicio = () => {
                   alt={photo.alt}
                   width={180}
                   height={180}
-                  className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-blue-100 dark:ring-blue-900 object-cover"
+                  className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-primary/20 dark:ring-primary/30 object-cover"
                   priority
                 />
               </div>
@@ -34,7 +34,7 @@ export const Inicio = () => {
               <span className="block text-gray-600 dark:text-gray-300 text-xl sm:text-3xl font-medium mb-1 sm:mb-2">
                 {t('home.title')}
               </span>
-              <strong className="text-blue-600 dark:text-blue-400">
+              <strong className="text-primary">
                 {t('home.titleBold')}
               </strong>
             </h1>
@@ -47,7 +47,7 @@ export const Inicio = () => {
               <Link
                 href="/contato"
                 onClick={() => trackEvent('click', 'CTA', 'Lets Talk - Hero')}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg"
               >
                 {t('cta.letsTalk')} →
               </Link>
@@ -60,10 +60,10 @@ export const Inicio = () => {
               </Link>
             </div>
 
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 rounded-full">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 dark:bg-primary/20 rounded-full">
               {badge.icon && <span className="text-3xl">{badge.icon}</span>}
               <div className="text-left">
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
+                <p className="text-sm font-semibold text-primary">
                   {t(badge.textKey)}
                 </p>
               </div>

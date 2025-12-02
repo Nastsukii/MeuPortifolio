@@ -39,7 +39,7 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
     <>
       <Head>
         {/* SEO básico */}
-        <title>Guilherme Cirelli — Desenvolvedor Full Stack | Next.js, React, Node.js</title>
+        <title>Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack | Next.js, React, Node.js</title>
         <meta
           name="description"
           content="Desenvolvedor Full Stack especializado em Next.js, React e Node.js. Criação de aplicações web modernas, responsivas e escaláveis. Veja meu portfolio e entre em contato."
@@ -49,16 +49,16 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Guilherme Cirelli — Desenvolvedor Full Stack" />
+        <meta property="og:title" content="Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack" />
         <meta property="og:description" content="Desenvolvimento de aplicações web modernas com Next.js, React e Node.js. Veja meu portfolio de projetos." />
         <meta property="og:url" content={generalSettings.siteUrl} />
         <meta property="og:image" content={`${generalSettings.siteUrl}/img/og-image.jpg`} />
-        <meta property="og:image:alt" content="Portfolio Guilherme Cirelli - Desenvolvedor Full Stack" />
+        <meta property="og:image:alt" content="Portfolio Luiz Antonio Comiran Bueno - Desenvolvedor Full Stack" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
-        <meta name="twitter:title" content="Guilherme Cirelli — Desenvolvedor Full Stack" />
+        <meta name="twitter:title" content="Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack" />
         <meta name="twitter:description" content="Desenvolvimento de aplicações web modernas com Next.js, React e Node.js. Veja meu portfolio de projetos." />
         <meta name="twitter:image" content={`${generalSettings.siteUrl}/img/twitter-image.jpg`} />
 
@@ -71,13 +71,13 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
               "@graph": [
                 {
                   "@type": "Person",
-                  "name": "Guilherme Cirelli",
+                  "name": "Luiz Antonio Comiran Bueno",
                   "jobTitle": "Desenvolvedor Full Stack",
                   "url": generalSettings.siteUrl,
                   "image": `${generalSettings.siteUrl}/img/perfil.jpeg`,
                   "sameAs": [
-                    "https://github.com/seu-github",
-                    "https://linkedin.com/in/seu-linkedin"
+                    "https://github.com/Nastsukii",
+                    "https://www.linkedin.com/in/luiz-antonio-comiran-bueno/"
                   ],
                   "knowsAbout": [
                     "Next.js",
@@ -89,9 +89,9 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
                 },
                 {
                   "@type": "WebSite",
-                  "name": "Portfolio Guilherme Cirelli",
+                  "name": "Portfolio Luiz Antonio Comiran Bueno",
                   "url": generalSettings.siteUrl,
-                  "description": "Professional portfolio of Guilherme Cirelli, Full Stack developer specialized in Next.js, React and Node.js",
+                  "description": "Professional portfolio of Luiz Antonio Comiran Bueno, Full Stack developer specialized in Next.js, React and Node.js",
                   "inLanguage": "en-US"
                 }
               ]

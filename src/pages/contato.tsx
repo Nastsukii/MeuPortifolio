@@ -68,8 +68,8 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
 
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-lg">
-                      <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="p-3 bg-primary/10 dark:bg-primary/20 rounded-lg">
+                      <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                       </svg>
@@ -78,7 +78,7 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                       <h3 className="font-semibold text-gray-900 dark:text-white">{t('contact.email')}</h3>
                       <a 
                         href={`mailto:${businessSettings.brandEmail}`}
-                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                        className="text-primary hover:underline"
                       >
                         {businessSettings.brandEmail}
                       </a>
@@ -138,7 +138,7 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                           className={`group relative p-4 w-fit text-xl font-semibold text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl border-2 ${
                             isGithub 
                               ? 'bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 hover:shadow-purple-500/25 border-purple-500 hover:border-purple-400' 
-                              : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 border-blue-500 hover:border-blue-400'
+                              : 'bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 hover:shadow-primary/25 border-primary hover:border-primary'
                           }`}
                           aria-label={link.label}
                         >
@@ -149,7 +149,7 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                           <div className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${
                             isGithub 
                               ? 'bg-gradient-to-r from-purple-400 to-purple-500' 
-                              : 'bg-gradient-to-r from-blue-400 to-blue-500'
+                              : 'bg-gradient-to-r from-primary/60 to-primary/40'
                           }`}></div>
                         </a>
                       );
@@ -183,7 +183,7 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">✓</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">

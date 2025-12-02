@@ -6,7 +6,7 @@ export function CustomSignInButton() {
   
   return (
     <SignInButton mode="modal">
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-2 px-4 rounded">
         {t('auth.signIn')}
       </button>
     </SignInButton>

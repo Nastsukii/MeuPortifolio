@@ -20,10 +20,10 @@ export const Footer = ({ className = "" }: FooterProps) => {
   
   // Usa a tradução diretamente do contexto ao invés de getBusinessSettings
   const businessSettings = {
-    brandName: "Guilherme Cirelli Lopes",
+    brandName: "Luiz Antonio Comiran Bueno",
     brandDescription: t('home.subtitle'),
-    brandEmail: "guilopes.030206@gmail.com",
-    brandPhone: "+55 43 99157-5781"
+    brandEmail: "comiranbueno0@gmail.com",
+    brandPhone: "+55 45 99938-3320"
   };
   
   // Previne erro de hidratação renderizando placeholder até montar
@@ -106,27 +106,27 @@ export const Footer = ({ className = "" }: FooterProps) => {
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors duration-200">
                   {t('navigation.home')}
                 </Link>
               </li>
               <li>
-                <Link href="/sobre" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/sobre" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors duration-200">
                   {t('navigation.about')}
                 </Link>
               </li>
               <li>
-                <Link href="/projetos" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/projetos" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors duration-200">
                   {t('navigation.projects')}
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/blog" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors duration-200">
                   {t('navigation.blog')}
                 </Link>
               </li>
               <li>
-                <Link href="/contato" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/contato" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors duration-200">
                   {t('navigation.contact')}
                 </Link>
               </li>
@@ -149,10 +149,10 @@ export const Footer = ({ className = "" }: FooterProps) => {
               </p>
               <p className="text-gray-600 dark:text-gray-300">
                 <a 
-                  href="mailto:guilopes.030206@gmail.com" 
-                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                  href="mailto:comiranbueno0@gmail.com" 
+                  className="hover:text-primary transition-colors duration-200"
                 >
-                  guilopes.030206@gmail.com
+                  comiranbueno0@gmail.com
                 </a>
               </p>
             </div>

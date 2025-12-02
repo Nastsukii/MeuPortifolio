@@ -8,8 +8,8 @@
   },
   "home": {
     "title": "Prazer, eu sou",
-    "titleBold": "Guilherme",
-    "subtitle": "Desenvolvedor Full Stack que transforma ideias em soluções digitais funcionais",
+    "titleBold": "Luiz Antonio",
+    "subtitle": "Desenvolvedor Full-Stack em formação, apaixonado por tecnologia e inovação.",
     "whatsapp": "WhatsApp",
     "hero": {
       "experience": "anos de experiência"
@@ -23,7 +23,7 @@
     },
     "about": {
       "title": "Quem sou eu?",
-      "description": "Estudante de ADS, conhecido por ser esforçado e comprometido. Transformo problemas em código limpo e funcional.",
+      "description": "Sou um desenvolvedor Full-Stack em formação, de 18 anos. Desde 2023 venho construindo projetos que unem criatividade, funcionalidade e código.",
       "cta": "Conheça Minha História"
     },
     "services": {
@@ -31,7 +31,7 @@
       "subtitle": "Desenvolvimento web completo com foco em resultados e qualidade de código",
       "fullstack": {
         "title": "Desenvolvimento Full Stack",
-        "description": "Construo aplicações web robustas e escaláveis do zero, integrando front-end moderno com APIs eficientes. Arquitetura pensada para crescer junto com seu negócio."
+        "description": "Construo aplicações web robustas e escaláveis, integrando front-end moderno com APIs eficientes. Arquitetura pensada para crescer junto com seu negócio."
       },
       "frontend": {
         "title": "Interfaces Modernas",
@@ -39,7 +39,7 @@
       },
       "deploy": {
         "title": "Deploy & Infraestrutura",
-        "description": "Configuro e otimizo toda a infraestrutura para produção. Seu projeto no ar, rápido e seguro. Monitoramento ativo e atualizações contínuas."
+        "description": "Configuro e otimizo a infraestrutura para produção. Seu projeto no ar, rápido e seguro. Monitoramento ativo e atualizações contínuas."
       },
       "viewAll": "Ver Todos os Serviços"
     },
@@ -48,23 +48,23 @@
       "subtitle": "Meus diferenciais",
       "commitment": {
         "title": "Comprometimento total",
-        "description": "Cumpro o que prometo, sempre buscando a melhor solução"
+        "description": "Valorizo o trabalho em equipe, a comunicação clara e a busca constante por melhorias."
       },
       "learning": {
         "title": "Aprendizado constante",
-        "description": "Sempre atualizado com as mais novas tecnologias"
+        "description": "Sempre atualizado com as mais novas tecnologias, como React e Node.js."
       },
       "results": {
         "title": "Foco em resultados",
-        "description": "Analiso profundamente antes de codificar"
+        "description": "Quero desenvolver soluções tecnológicas que gerem impacto real."
       }
     },
     "projects": {
       "title": "Projetos em Destaque",
       "subtitle": "Alguns dos meus melhores trabalhos",
-      "project1": "Sistema completo com Next.js e TypeScript",
-      "project2": "Aplicação web com React e Node.js",
-      "project3": "API REST com PostgreSQL",
+      "project1": "Sistema completo com Node.js e JavaScript",
+      "project2": "Aplicações interativas e jogos",
+      "project3": "Sistemas CRUD e APIs",
       "viewAll": "Ver Todos os Projetos"
     },
     "techStack": {
@@ -75,16 +75,16 @@
       "title": "Minha Jornada",
       "subtitle": "De onde vim e para onde vou",
       "item1": {
-        "date": "Fev 2024",
-        "title": "Início em ADS"
+        "date": "Jan 2024 - Presente",
+        "title": "Programador Freelancer"
       },
       "item2": {
-        "date": "Jan 2025",
-        "title": "A.Yoshii Engenharia"
+        "date": "Ago 2024 - Presente",
+        "title": "Auxiliar de Cartório"
       },
       "item3": {
-        "date": "Jul 2025",
-        "title": "Mentoria Especializada"
+        "date": "Jul 2025 - Jul 2028",
+        "title": "Graduação em ADS"
       },
       "viewAll": "Ver Linha do Tempo Completa"
     },
@@ -119,11 +119,11 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "introduction": "Olá! Sou Guilherme Cirelli Lopes, estudante de Análise e Desenvolvimento de Sistemas, conhecido por ser esforçado e honrado em cumprir o que prometo. Meu objetivo é ajudar empreendedores e profissionais como você a transformar ideias em projetos digitais de sucesso, com soluções escaláveis, modernas e funcionais.",
+    "introduction": "Olá! Sou Luiz Antonio Comiran Bueno, desenvolvedor Full-Stack em formação, de 18 anos, apaixonado por tecnologia. Desde 2023 venho construindo projetos que unem criatividade, funcionalidade e código. Valorizo o trabalho em equipe, a comunicação clara e a busca constante por melhorias. Quero desenvolver soluções tecnológicas que gerem impacto real, evoluindo como profissional de software.",
     "education": {
       "title": "Educação",
-      "degree": "Graduando em Análise e Desenvolvimento de Sistemas",
-      "degreeShort": "Análise e Desenvolvimento de Sistemas"
+      "degree": "TADS na Univel (Presencial)",
+      "degreeShort": "TADS - Univel"
     },
     "specialization": {
       "title": "Especialização",
@@ -132,29 +132,29 @@
     "services": {
       "title": "O que posso fazer pelo seu projeto?",
       "items": [
-        "Desenvolvimento de sites responsivos e modernos, que destacam seus produtos ou serviços.",
-        "Criação de aplicações web personalizadas, com Front-End e Back-End integrados.",
-        "Otimização e deploy em plataformas como Netlify e Vercel, garantindo performance e estabilidade.",
-        "Estruturação de sistemas eficientes usando Node.js, SQL, ReactJS e NextJS.",
-        "Documentação organizada e comunicação clara, facilitando o trabalho em equipe e futuras manutenções."
+        "Desenvolvimento de sistemas CRUD (Usuários, Produtos) com Node.js e JavaScript puro.",
+        "Criação de aplicações interativas como conversor de moedas, sorteador de números e jogos.",
+        "Implementação de filtros dinâmicos e lógica complexa no front-end.",
+        "Versionamento de código e documentação no GitHub.",
+        "Execução de processos administrativos e organização de documentos (experiência administrativa)."
       ]
     },
     "whyChoose": {
       "title": "Por que escolher trabalhar comigo?",
       "items": [
-        "Comprometimento total: cumpro o que prometo, estudando e aplicando soluções eficazes.",
-        "Aprendizado rápido e constante: estou sempre atualizado nas tecnologias mais recentes, oferecendo soluções modernas e eficientes.",
-        "Foco em resultados: antes de codificar, analiso e entendo profundamente o problema, garantindo que a solução atenda exatamente às suas necessidades."
+        "Comprometimento total: cumpro o que prometo, sempre buscando a melhor solução.",
+        "Aprendizado rápido e constante: estou sempre atualizado nas tecnologias mais recentes (atualmente focando em React).",
+        "Foco em resultados: busco desenvolver soluções que gerem impacto real e contribuam para a equipe."
       ]
     },
     "skills": {
       "title": "Minhas habilidades técnicas:",
       "frontend": "Front-End:",
       "backend": "Back-End:",
-      "deploy": "Deploy & Otimização:",
-      "frontendTechs": "ReactJS | NextJS | HTML5 | CSS3 | Tailwind CSS | Bootstrap | JavaScript | TypeScript",
-      "backendTechs": "Node.js | SQL | APIs REST | Git | GitHub",
-      "deployTechs": "Netlify | Vercel"
+      "deploy": "Ferramentas:",
+      "frontendTechs": "HTML5 | CSS3 | JavaScript | React (Em aprendizado)",
+      "backendTechs": "Node.js | SQL (Banco de Dados) | Async/Await",
+      "deployTechs": "Git | GitHub"
     }
   },
   "projects": {
@@ -189,7 +189,7 @@
     "email": "E-mail",
     "phone": "Telefone",
     "location": "Localização",
-    "locationText": "Londrina, PR - Brasil",
+    "locationText": "Catanduvas, PR - Brasil",
     "connect": {
       "title": "Conecte-se Comigo",
       "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!"
@@ -200,7 +200,7 @@
     "sendMessage": "Enviar Mensagem",
     "name": "Nome",
     "namePlaceholder": "Seu nome completo",
-    "emailPlaceholder": "seu@email.com",
+    "emailPlaceholder": "comiranbueno0@gmail.com",
     "message": "Mensagem",
     "messagePlaceholder": "Conte-me sobre seu projeto ou oportunidade...",
     "sendButton": "Enviar Mensagem",
@@ -232,7 +232,7 @@
   "footer": {
     "quickLinks": "Links Rápidos",
     "contact": "Contato",
-    "copyright": "© 2025 Guilherme Cirelli Lopes. Todos os direitos reservados. Construído com Next.js e muito ☕."
+    "copyright": "© 2025 Luiz Antonio Comiran Bueno. Todos os direitos reservados."
   },
   "auth": {
     "signIn": "Entrar",
@@ -284,39 +284,29 @@
     },
     "timeline": [
       {
-        "date": "Fev 2024",
-        "title": "Início na Análise e Desenvolvimento de Sistemas",
-        "description": "Comecei minha jornada acadêmica no curso superior de ADS, aprendendo os fundamentos essenciais: lógica de programação, algoritmos e estrutura de dados. Descobri como os computadores realmente funcionam, desde os sistemas binários até as redes."
+        "date": "Jan 2024 - Presente",
+        "title": "Programador Freelancer",
+        "description": "Atuo como autônomo desenvolvendo sistemas CRUD com Node.js e JavaScript puro, além de criar aplicações interativas e jogos. Implemento filtros dinâmicos e utilizo Git/GitHub para versionamento."
       },
       {
-        "date": "Mar 2024 – Maio 2024",
-        "title": "Primeiros Passos no Desenvolvimento Web",
-        "description": "Mergulhei no mundo do desenvolvimento web, aprendendo HTML5, CSS3 e JavaScript. Criei meus primeiros sites e descobri a importância do Git para trabalhar em equipe. Foquei em fazer páginas que funcionam bem em qualquer dispositivo."
+        "date": "Ago 2024 - Presente",
+        "title": "Auxiliar de Cartório - Registro de Imóveis",
+        "description": "Responsável pela execução de processos administrativos, organização de documentos, rotinas de análise e emissão de certidões. Desenvolvo habilidades de resolução de problemas e trabalho em equipe."
       },
       {
-        "date": "Jun 2024 – Dez 2024",
-        "title": "Explorando o Desenvolvimento Web",
-        "description": "Aprofundei meus conhecimentos criando projetos mais complexos. Aprendi a trabalhar com APIs, melhorar a experiência do usuário e dar os primeiros passos com Node.js no back-end. Cada projeto trouxe novos desafios e aprendizados."
+        "date": "Jul 2025 - Jul 2028",
+        "title": "TADS na Univel (Presencial)",
+        "description": "Cursando Tecnologia em Análise e Desenvolvimento de Sistemas na Univel (Presencial). Foco em aprofundar conhecimentos em engenharia de software, arquitetura de sistemas e desenvolvimento full-stack."
       },
       {
-        "date": "Jan 2025",
-        "title": "Início na A.Yoshii Engenharia",
-        "description": "Conquistei minha primeira oportunidade profissional como Assistente de TI. Aqui, coloco em prática meus conhecimentos, ajudando a manter sistemas funcionando e resolvendo problemas reais de infraestrutura de TI."
+        "date": "Fev 2024 - Jun 2025",
+        "title": "Técnico em Desenvolvimento de Sistemas",
+        "description": "Curso técnico no CEEP Pedro Boaretto Neto. Aprendizado prático de lógica de programação, banco de dados e desenvolvimento de aplicações desktop e web."
       },
       {
-        "date": "Fev 2025 – Jun 2025",
-        "title": "Desenvolvendo Soluções Completas",
-        "description": "Dediquei-me a criar aplicações web do zero, unindo front-end e back-end. Trabalhei com Next.js e Node.js, sempre pensando na qualidade do código e na experiência do usuário. Cada projeto me ensinou algo novo sobre desenvolvimento profissional."
-      },
-      {
-        "date": "Jul 2025 – Atual",
-        "title": "Aprendizado com Mentoria",
-        "description": "Iniciei um programa de mentoria personalizado para aprimorar minhas habilidades em desenvolvimento web. Estou aprendendo as melhores práticas do mercado e construindo projetos reais com Next.js, React e Node.js."
-      },
-      {
-        "date": "Set 2025 – Em andamento",
-        "title": "Construindo Meu Futuro",
-        "description": "Trabalho no meu portfolio e em projetos pessoais, colocando em prática tudo que aprendi. Busco contribuir com a comunidade open source e continuo aprendendo novas tecnologias e métodos de desenvolvimento."
+        "date": "Mar 2023 - Maio 2024",
+        "title": "Dev Club - Programação de Computadores",
+        "description": "Curso intensivo onde iniciei minha jornada na programação, aprendendo os fundamentos e tecnologias web modernas."
       }
     ]
   }

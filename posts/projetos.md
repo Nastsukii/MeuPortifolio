@@ -1,7 +1,7 @@
 ---
 title: "Meus Projetos"
 date: "2025-01-15"
-author: "Guilherme Cirelli Lopes"
+author: "Luiz Antonio Comiran Bueno"
 public: true
 ---
 

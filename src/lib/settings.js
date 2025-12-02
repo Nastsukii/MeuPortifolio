@@ -1,31 +1,31 @@
 // Configurações estáticas para evitar problemas com fs no cliente
 const businessSettingsPT = {
-  "brandName": "Guilherme Cirelli Lopes",
+  "brandName": "Luiz Antonio Comiran Bueno",
   "brandDescription": "Desenvolvedor web apaixonado por criar soluções eficientes e práticas.",
-  "brandEmail": "guilopes.030206@gmail.com",
+  "brandEmail": "comiranbueno0@gmail.com",
   "brandKeywords": ["Desenvolvedor Web", "Portfolio", "JavaScript", "Next.js", "React", "Node.js"],
-  "brandPhone": "+55 43 99157-5781"
+  "brandPhone": "+55 45 99938-3320"
 };
 
 const businessSettingsEN = {
-  "brandName": "Guilherme Cirelli Lopes",
+  "brandName": "Luiz Antonio Comiran Bueno",
   "brandDescription": "Web developer passionate about delivering efficient and practical solutions.",
-  "brandEmail": "guilopes.030206@gmail.com",
+  "brandEmail": "comiranbueno0@gmail.com",
   "brandKeywords": ["Web Developer", "Portfolio", "JavaScript", "Next.js", "React", "Node.js"],
-  "brandPhone": "+55 43 99157-5781"
+  "brandPhone": "+55 45 99938-3320"
 };
 
 const generalSettings = {
-  "siteUrl": "https://guilherme-cirelli.dev",
-  "footerText": "© 2025 Guilherme Cirelli Lopes. Todos os direitos reservados. Construído com Next.js e muito ☕.",
+  "siteUrl": "https://luiz-antonio-comiran-bueno.vercel.app",
+  "footerText": "© 2025 Luiz Antonio Comiran Bueno. Todos os direitos reservados. Construído com Next.js e muito ☕.",
   "postsToShow": 6,
   "homeCategory": "Development",
   "cookieConsent": false,
   "darkModeSwitcher": true,
-  "feedbackEmail": "guilopes.030206@gmail.com",
+  "feedbackEmail": "comiranbueno0@gmail.com",
   "publishedDate": "2025-01-15 00:00:00",
   "i18n": "en",
-  "errorMessage": "Oops... something went wrong. Please try again later or contact us: guilopes.030206@gmail.com"
+  "errorMessage": "Oops... something went wrong. Please try again later or contact us: comiranbueno0@gmail.com"
 };
 
 const themeSettings = {
@@ -96,17 +96,17 @@ const mainMenu = {
 const linkTreeData = {
   "linkTree": [
     {
-      "href": "https://www.linkedin.com/in/guicirelli/",
+      "href": "https://www.linkedin.com/in/luiz-antonio-comiran-bueno/",
       "label": "LinkedIn",
       "icon": "FaLinkedin"
     },
     {
-      "href": "https://github.com/guicirelli",
+      "href": "https://github.com/Nastsukii",
       "label": "GitHub",
       "icon": "FaGithub"
     },
     {
-      "href": "mailto:guilopes.030206@gmail.com",
+      "href": "mailto:comiranbueno0@gmail.com",
       "label": "Email",
       "icon": "FaEnvelope"
     }
@@ -160,6 +160,6 @@ export const getVersionInfo = () => {
   return {
     version: "1.0.0",
     nextVersion: "13.5.7",
-    message: "Portfolio pessoal - Guilherme Cirelli Lopes"
+    message: "Portfolio pessoal - Luiz Antonio Comiran Bueno"
   };
 };

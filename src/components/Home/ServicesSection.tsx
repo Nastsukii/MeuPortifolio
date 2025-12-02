@@ -23,7 +23,7 @@ export const ServicesSection = () => {
               key={service.id}
               className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              {service.icon && <div className="text-5xl mb-4">{service.icon}</div>}
+              {service.icon && <div className="text-5xl mb-4 text-primary">{service.icon}</div>}
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                 {t(service.titleKey)}
               </h3>
@@ -34,7 +34,7 @@ export const ServicesSection = () => {
                 {service.techs.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 text-sm rounded-full font-medium"
+                    className="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-sm rounded-full font-medium"
                   >
                     {tech}
                   </span>
@@ -47,7 +47,7 @@ export const ServicesSection = () => {
         <div className="text-center mt-12">
           <Link
             href="/sobre"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl neon-shadow"
           >
             {t('home.services.viewAll')}
           </Link>

@@ -1,7 +1,7 @@
 ---
 title: "Projeto 4"
 date: "2025-01-17"
-author: "Guilherme Cirelli Lopes"
+author: "Luiz Antonio Comiran Bueno"
 public: true
 ---
 

@@ -295,13 +295,13 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
       {/* Notificação de Login */}
       {mostrarNotificacao && (
         <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 min-w-[320px]">
+          <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-6 py-4 rounded-lg shadow-2xl neon-shadow flex items-center gap-3 min-w-[320px]">
             <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
             <div>
               <p className="font-semibold text-base">{t('projects.like.loginRequired')}</p>
-              <p className="text-sm text-blue-100">{t('projects.like.loginMessage')}</p>
+              <p className="text-sm text-primary/80">{t('projects.like.loginMessage')}</p>
             </div>
             <button 
               onClick={() => setMostrarNotificacao(false)}
@@ -348,9 +348,9 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                     role="button"
                     tabIndex={0}
                     aria-label={`Selecionar ${t('projects.projectNumber')} ${projeto.id}`}
-                    className={`w-full text-left px-5 py-4 rounded-lg transition-all duration-200 shadow-lg relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                    className={`w-full text-left px-5 py-4 rounded-lg transition-all duration-200 shadow-lg relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary ${
                       projetoSelecionado.id === projeto.id
-                        ? 'bg-blue-600 text-white shadow-blue-600/30'
+                        ? 'bg-primary text-primary-foreground shadow-primary/30'
                         : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 shadow-gray-300/50 dark:shadow-gray-900/50'
                     }`}
                   >
@@ -431,7 +431,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                       {t('projects.projectNumber')} {projetoSelecionado.id}
                     </h2>
                     {projetoSelecionado.featured && (
-                      <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full neon-shadow">
                         {t('projects.featuredBadge')}
                       </span>
                     )}
@@ -444,7 +444,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                   {/* Funcionalidades - Esquerda */}
                   <div className="lg:col-span-2">
                     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                      <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       {t('projects.features')}
@@ -452,7 +452,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                     <ul className="space-y-3">
                       {projetoSelecionado.funcionalidades.map((func, index) => (
                         <li key={index} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
-                          <span className="text-blue-600 dark:text-blue-400 text-xl mt-0.5">•</span>
+                          <span className="text-primary text-xl mt-0.5">•</span>
                           <span className="text-base">{func}</span>
                         </li>
                       ))}
@@ -501,7 +501,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                     {projetoSelecionado.tecnologias.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                        className="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
                       >
                         {tech}
                       </span>
@@ -524,7 +524,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
             </p>
             <Link
               href="/contato"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 neon-shadow"
             >
               {t('projects.interested.getInTouch')}
             </Link>

@@ -56,7 +56,7 @@ const Contatos = ({ contacts }: ContatosProps) => {
   return (
     <>
       <Head>
-        <title>Contacts | Guilherme</title>
+        <title>Contacts | Luiz Antonio Comiran Bueno</title>
       </Head>
       <div className=" px-6 md:px-32 bg-h-blue-900 rounded-lg shadow-lg py-10">
         <h1 className="text-5xl md:text-7xl font-bold text-center mb-10">Contacts</h1>
@@ -87,7 +87,7 @@ const Contatos = ({ contacts }: ContatosProps) => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-h-blue-500"
+                className="w-full p-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Your Name"
                 required
               />
@@ -100,8 +100,8 @@ const Contatos = ({ contacts }: ContatosProps) => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-h-blue-500"
-                placeholder="your.email@example.com"
+                className="w-full p-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="comiranbueno0@gmail.com"
                 required
               />
             </div>
@@ -136,11 +136,11 @@ const loadContacts = async () => {
   return [
     {
       name: "LinkedIn",
-      link: "https://www.linkedin.com/in/guicirelli/",
+      link: "https://www.linkedin.com/in/luiz-antonio-comiran-bueno/",
     },
     {
       name: "GitHub",
-      link: "https://github.com/guicirelli",
+      link: "https://github.com/Nastsukii",
     },
   ];
 };

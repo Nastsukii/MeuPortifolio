@@ -14,7 +14,7 @@ export const StatsSection = () => {
           {statsData.stats.map((stat) => (
             <div key={stat.id} className="text-center">
               {stat.icon && <div className="text-4xl mb-2">{stat.icon}</div>}
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                 {stat.number}
               </div>
               <div className="text-gray-700 dark:text-gray-300 font-medium">

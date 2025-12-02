@@ -1,7 +1,7 @@
 ---
 title: "🏆 Projeto 3"
 date: "2025-01-18"
-author: "Guilherme Cirelli Lopes"
+author: "Luiz Antonio Comiran Bueno"
 public: true
 ---
 

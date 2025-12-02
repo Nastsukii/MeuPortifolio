@@ -31,7 +31,7 @@ export const AboutSection = () => {
             <Link
               href={link}
               onClick={() => trackEvent('click', 'CTA', 'About - Home')}
-              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:gap-3 font-semibold text-lg transition-all duration-200"
+              className="inline-flex items-center gap-2 text-primary hover:gap-3 font-semibold text-lg transition-all duration-200"
             >
               {t('home.about.cta')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

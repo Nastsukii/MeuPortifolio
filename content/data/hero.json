@@ -5,12 +5,12 @@
       "textKey": "about.education.degreeShort"
     },
     "experienceBadge": {
-      "number": "2+",
+      "number": "1+",
       "textKey": "home.hero.experience"
     },
     "photo": {
       "url": "/img/foto perfil.jpeg",
-      "alt": "Guilherme Cirelli Lopes",
+      "alt": "Luiz Antonio Comiran Bueno",
       "width": 400,
       "height": 400
     }

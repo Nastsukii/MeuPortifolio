@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-12-02T15:01:00Z",
+  "from": "Luiz Antonio Comiran Bueno",
+  "to": "Luiz Antonio Comiran Bueno",
+  "files": [
+    {
+      "path": "src/lib/settings.js",
+      "occurrences": [
+        { "line": 3, "text": "\"brandName\": \"Luiz Antonio Comiran Bueno\"," },
+        { "line": 11, "text": "\"brandName\": \"Luiz Antonio Comiran Bueno\"," },
+        { "line": 20, "text": "\"footerText\": \"© 2025 Luiz Antonio Comiran Bueno. Todos os direitos reservados. Construído com Next.js e muito ☕.\"," },
+        { "line": 163, "text": "message: \"Portfolio pessoal - Luiz Antonio Comiran Bueno\"" }
+      ]
+    },
+    { "path": "src/pages/sobre.tsx", "occurrences": [
+      { "line": 61, "text": "alt=\"Luiz Antonio Comiran Bueno\"" },
+      { "line": 68, "text": "alt=\"Luiz Antonio Comiran Bueno working\"" }
+    ]},
+    { "path": "src/components/commons/Header/Menu.tsx", "occurrences": [
+      { "line": 41, "text": "alt=\"Luiz Antonio Comiran Bueno\"" }
+    ]},
+    { "path": "src/components/commons/Footer.tsx", "occurrences": [
+      { "line": 23, "text": "brandName: \"Luiz Antonio Comiran Bueno\"," }
+    ]},
+    { "path": "public/locales/en/common.json", "occurrences": [
+      { "line": 122, "text": "Hello! I'm Luiz Antonio Comiran Bueno" },
+      { "line": 235, "text": "© 2025 Luiz Antonio Comiran Bueno. All rights reserved." }
+    ]},
+    { "path": "public/home.json", "occurrences": [
+      { "line": 25, "text": "\"alt\": \"Foto de Luiz Antonio Comiran Bueno\"" }
+    ]},
+    { "path": "content/settings/business.en.json", "occurrences": [
+      { "line": 2, "text": "\"brandName\": \"Luiz Antonio Comiran Bueno\"," }
+    ]},
+    { "path": "README.md", "occurrences": [
+      { "line": 1, "text": "# Portfolio Luiz Antonio Comiran Bueno" },
+      { "line": 249, "text": "**Luiz Antonio Comiran Bueno**" },
+      { "line": 257, "text": "Desenvolvido com ❤️ por Luiz Antonio Comiran Bueno" }
+    ]},
+    { "path": "MAILCHIMP-SETUP.md", "occurrences": [
+      { "line": 156, "text": "**Desenvolvido por:** Luiz Antonio Comiran Bueno" }
+    ]},
+    { "path": "ARQUITETURA-DADOS.md", "occurrences": [
+      { "line": 42, "text": "\"alt\": \"Luiz Antonio Comiran Bueno\"" }
+    ]},
+    { "path": "report.md", "occurrences": [
+      { "line": 1, "text": "# Relatório Técnico - Portfolio Luiz Antonio Comiran Bueno" },
+      { "line": 5, "text": "portfolio pessoal de Luiz Antonio Comiran Bueno" },
+      { "line": 291, "text": "**Desenvolvido por**: Luiz Antonio Comiran Bueno" }
+    ]},
+    { "path": "posts/about-me.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projetos.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-1.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-2.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-3.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-4.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-5.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-6.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-10.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-top-1.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-top-2.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]},
+    { "path": "posts/projeto-top-3.md", "occurrences": [ { "line": 4, "text": "author: \"Luiz Antonio Comiran Bueno\"" } ]}
+  ]
+}

@@ -1,7 +1,7 @@
 ---
 title: "Projeto 9"
 date: "2025-01-12"
-author: "Guilherme Cirelli Lopes"
+author: "Luiz Antonio Comiran Bueno"
 public: true
 ---
 

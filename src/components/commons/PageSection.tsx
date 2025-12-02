@@ -85,7 +85,7 @@ export const PageSection = ({
             {ctaBtnText && ctaBtnLink && (
               <a
                 href={ctaBtnLink}
-                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
                 {ctaBtnText}
               </a>
@@ -93,7 +93,7 @@ export const PageSection = ({
             {ctaContrastBtnText && ctaContrastBtnLink && (
               <a
                 href={ctaContrastBtnLink}
-                className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 font-semibold rounded-lg transition-colors duration-200"
+                className="inline-flex items-center px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 font-semibold rounded-lg transition-colors duration-200"
               >
                 {ctaContrastBtnText}
               </a>

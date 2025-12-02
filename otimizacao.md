@@ -7,7 +7,7 @@ Aumentar taxa de conversão (CRO) e visibilidade orgânica (SEO) através de mel
 
 ### Title
 ```html
-<title>Guilherme Cirelli — Desenvolvedor Full Stack | Next.js, React, Node.js</title>
+<title>Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack | Next.js, React, Node.js</title>
 ```
 - Comprimento ideal: 50-60 caracteres
 - Palavras-chave principais no início
@@ -23,7 +23,7 @@ Aumentar taxa de conversão (CRO) e visibilidade orgânica (SEO) através de mel
 
 ### Canonical e Robots
 ```html
-<link rel="canonical" href="https://www.guilhermecirelli.com.br/" />
+<link rel="canonical" href="https://www.luiz-antonio-comiran-bueno.com.br/" />
 <meta name="robots" content="index, follow" />
 ```
 
@@ -39,12 +39,12 @@ Aumentar taxa de conversão (CRO) e visibilidade orgânica (SEO) através de mel
 ```html
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Guilherme Cirelli — Desenvolvedor Full Stack" />
+<meta property="og:title" content="Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack" />
 <meta property="og:description" content="Desenvolvimento de aplicações web modernas com Next.js, React e Node.js. Veja meu portfolio de projetos." />
-<meta property="og:url" content="https://www.guilhermecirelli.com.br/" />
-<meta property="og:site_name" content="Guilherme Cirelli" />
-<meta property="og:image" content="https://www.guilhermecirelli.com.br/img/og-image.jpg" />
-<meta property="og:image:alt" content="Portfolio Guilherme Cirelli - Desenvolvedor Full Stack" />
+<meta property="og:url" content="https://www.luiz-antonio-comiran-bueno.com.br/" />
+<meta property="og:site_name" content="Luiz Antonio Comiran Bueno" />
+<meta property="og:image" content="https://www.luiz-antonio-comiran-bueno.com.br/img/og-image.jpg" />
+<meta property="og:image:alt" content="Portfolio Luiz Antonio Comiran Bueno - Desenvolvedor Full Stack" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 ```
@@ -52,9 +52,9 @@ Aumentar taxa de conversão (CRO) e visibilidade orgânica (SEO) através de mel
 ### Twitter Cards
 ```html
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Guilherme Cirelli — Desenvolvedor Full Stack" />
+<meta name="twitter:title" content="Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack" />
 <meta name="twitter:description" content="Desenvolvimento de aplicações web modernas com Next.js, React e Node.js. Veja meu portfolio de projetos." />
-<meta name="twitter:image" content="https://www.guilhermecirelli.com.br/img/twitter-image.jpg" />
+<meta name="twitter:image" content="https://www.luiz-antonio-comiran-bueno.com.br/img/twitter-image.jpg" />
 ```
 
 ## 3. JSON-LD (Schema.org)
@@ -64,13 +64,13 @@ Aumentar taxa de conversão (CRO) e visibilidade orgânica (SEO) através de mel
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Guilherme Cirelli",
+  "name": "Luiz Antonio Comiran Bueno",
   "jobTitle": "Desenvolvedor Full Stack",
-  "url": "https://www.guilhermecirelli.com.br",
-  "image": "https://www.guilhermecirelli.com.br/img/perfil.jpg",
+  "url": "https://www.luiz-antonio-comiran-bueno.com.br",
+  "image": "https://www.luiz-antonio-comiran-bueno.com.br/img/perfil.jpg",
   "sameAs": [
-    "https://github.com/seu-github",
-    "https://linkedin.com/in/seu-linkedin"
+    "https://github.com/Nastsukii",
+    "https://www.linkedin.com/in/luiz-antonio-comiran-bueno/"
   ],
   "knowsAbout": [
     "Next.js",
@@ -87,9 +87,9 @@ Aumentar taxa de conversão (CRO) e visibilidade orgânica (SEO) através de mel
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Portfolio Guilherme Cirelli",
-  "url": "https://www.guilhermecirelli.com.br",
-  "description": "Portfolio profissional de Guilherme Cirelli, desenvolvedor Full Stack especializado em Next.js, React e Node.js",
+  "name": "Portfolio Luiz Antonio Comiran Bueno",
+  "url": "https://www.luiz-antonio-comiran-bueno.com.br",
+  "description": "Portfolio profissional de Luiz Antonio Comiran Bueno, desenvolvedor Full Stack especializado em Next.js, React e Node.js",
   "inLanguage": "pt-BR"
 }
 ```

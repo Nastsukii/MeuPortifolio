@@ -1,17 +1,12 @@
 {
   "linkTree": [
     {
-      "href": "https://www.linkedin.com/in/guicirelli/",
+      "href": "https://www.linkedin.com/in/luiz-antonio-comiran-bueno",
       "label": "LinkedIn",
       "icon": "FaLinkedin"
     },
     {
-      "href": "https://github.com/guicirelli",
-      "label": "GitHub",
-      "icon": "FaGithub"
-    },
-    {
-      "href": "mailto:guilherme@cirelli.dev",
+      "href": "mailto:comiranbueno0@gmail.com",
       "label": "Email",
       "icon": "FaEnvelope"
     }

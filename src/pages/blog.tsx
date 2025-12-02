@@ -20,7 +20,7 @@ const Blog = ({ businessSettings, generalSettings }: BlogProps) => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-300">{t('blog.exclusive.loading')}</p>
         </div>
       </div>
@@ -48,7 +48,7 @@ const Blog = ({ businessSettings, generalSettings }: BlogProps) => {
               {t('blog.exclusive.message')}
             </p>
             <SignInButton mode="modal">
-              <button className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
+              <button className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl neon-shadow">
                 {t('blog.exclusive.loginButton')}
               </button>
             </SignInButton>
@@ -81,19 +81,19 @@ const Blog = ({ businessSettings, generalSettings }: BlogProps) => {
               {/* Timeline */}
               <div className="relative">
                 {/* Timeline line */}
-                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/30 dark:bg-primary/20"></div>
                 
                 {/* Timeline items */}
                 <div className="space-y-12">
                   {Array.isArray(t('blog.timeline')) && t('blog.timeline').map((item: any, index: number) => (
                     <div key={index} className="relative flex items-start">
                       {/* Timeline dot */}
-                      <div className="absolute left-6 w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full border-4 border-white dark:border-gray-900 z-10"></div>
+                      <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-white dark:border-gray-900 z-10 neon-shadow"></div>
                       
                       {/* Content */}
                       <div className="ml-16 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full">
+                          <span className="text-sm font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
                             {item.date}
                           </span>
                         </div>
@@ -121,7 +121,7 @@ const Blog = ({ businessSettings, generalSettings }: BlogProps) => {
                 </p>
                 <Link
                   href="/contato"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 neon-shadow"
                 >
                   {t('blog.cta.button')}
                 </Link>

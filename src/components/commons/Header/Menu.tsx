@@ -38,13 +38,13 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/img/foto perfil.jpeg"
-              alt="Guilherme Cirelli Lopes"
+              alt="Luiz Antonio Comiran Bueno"
               width={40}
               height={40}
               className="w-10 h-10 rounded-full object-cover"
             />
             <span className="font-bold text-gray-900 dark:text-white text-lg">
-              Guilherme Cirelli
+              Luiz Antonio Comiran Bueno
             </span>
           </Link>
           <div className="flex items-center gap-3">
@@ -59,35 +59,35 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
           <Link
             href="/"
             onClick={onClose}
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200"
           >
             {t('navigation.home')}
           </Link>
           <Link
             href="/sobre"
             onClick={onClose}
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200"
           >
             {t('navigation.about')}
           </Link>
           <Link
             href="/projetos"
             onClick={onClose}
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200"
           >
             {t('navigation.projects')}
           </Link>
           <Link
             href="/blog"
             onClick={onClose}
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200"
           >
             {t('navigation.blog')}
           </Link>
           <Link
             href="/contato"
             onClick={onClose}
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200"
           >
             {t('navigation.contact')}
           </Link>

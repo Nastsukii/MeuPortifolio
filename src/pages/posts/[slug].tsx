@@ -131,7 +131,7 @@ const Post = ({ postData }: PostProps) => {
           </>
         )}
 
-        <p className="mt-8 text-center"><Link href="/" className="text-blue-500 hover:underline">Voltar para a Home</Link></p>
+        <p className="mt-8 text-center"><Link href="/" className="text-primary hover:underline">Voltar para a Home</Link></p>
       </div>
     </>
   );

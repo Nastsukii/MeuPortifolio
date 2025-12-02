@@ -12,7 +12,7 @@ export const FloatingContactButton = () => {
       {/* Botão flutuante */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 group"
+        className="fixed bottom-6 right-6 z-50 bg-primary hover:bg-primary/90 text-primary-foreground p-4 rounded-full shadow-2xl neon-shadow transition-all duration-300 hover:scale-110 group"
         aria-label={isOpen ? t('floatingButton.closeMenu') : t('floatingButton.openMenu')}
       >
         {isOpen ? (
@@ -29,7 +29,7 @@ export const FloatingContactButton = () => {
         
         {/* Pulso animado */}
         {!isOpen && (
-          <span className="absolute inset-0 rounded-full bg-blue-600 animate-ping opacity-20"></span>
+          <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20"></span>
         )}
       </button>
 
@@ -40,21 +40,21 @@ export const FloatingContactButton = () => {
             {/* Botão para página de contato */}
             <Link
               href="/contato"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2.5 text-sm rounded-lg transition-colors text-center"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2.5 text-sm rounded-lg transition-colors text-center neon-shadow"
             >
               {t('floatingButton.contactMe')}
             </Link>
 
             {/* Email com ícone e texto */}
             <a
-              href="mailto:guilopes.030206@gmail.com"
-              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors border border-gray-200 dark:border-gray-700"
+              href="mailto:comiranbueno0@gmail.com"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors border border-gray-200 dark:border-gray-700"
             >
-              <svg className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-              <span className="text-xs font-medium text-gray-900 dark:text-white truncate">guilopes.030206@gmail.com</span>
+              <span className="text-xs font-medium text-gray-900 dark:text-white truncate">comiranbueno0@gmail.com</span>
             </a>
 
             {/* Redes Sociais */}
@@ -74,20 +74,20 @@ export const FloatingContactButton = () => {
 
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/guicirelli/"
+                href="https://www.linkedin.com/in/luiz-antonio-comiran-bueno/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors border border-gray-200 dark:border-gray-700"
+                className="p-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors border border-gray-200 dark:border-gray-700"
                 title="LinkedIn"
               >
-                <svg className="w-5 h-5 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
 
               {/* GitHub */}
               <a
-                href="https://github.com/Guilopes1"
+                href="https://github.com/Nastsukii"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700"

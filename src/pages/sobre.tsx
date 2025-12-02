@@ -58,14 +58,14 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                 <div className="flex-shrink-0 flex flex-row sm:flex-col gap-4 sm:gap-8 justify-center lg:justify-start">
                   <Image
                     src="/img/perfil2.jpeg"
-                    alt="Guilherme Cirelli Lopes"
+                    alt="Luiz Antonio Comiran Bueno"
                     width={256}
                     height={256}
                     className="w-24 h-24 sm:w-48 sm:h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl"
                   />
                   <Image
                     src="/img/perfil3.jpeg"
-                    alt="Guilherme Cirelli Lopes working"
+                    alt="Luiz Antonio Comiran Bueno working"
                     width={256}
                     height={256}
                     className="w-24 h-24 sm:w-48 sm:h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl"
@@ -75,6 +75,37 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                     {t('about.introduction')}
                   </p>
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                      Formação Acadêmica
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                          Formação Técnica
+                        </h4>
+                        <ul className="text-gray-700 dark:text-gray-300 space-y-1">
+                          <li><strong>Curso:</strong> Técnico em Desenvolvimento de Sistemas</li>
+                          <li><strong>Instituição:</strong> CEEP (Centro Estadual de Educação Profissional)</li>
+                          <li><strong>Localização:</strong> Cascavel</li>
+                          <li><strong>Situação:</strong> Concluído</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                          Graduação em Andamento
+                        </h4>
+                        <ul className="text-gray-700 dark:text-gray-300 space-y-1">
+                          <li><strong>Curso:</strong> Tecnologia em Análise e Desenvolvimento de Sistemas</li>
+                          <li><strong>Instituição:</strong> UNIVEL (Centro Universitário de Cascavel)</li>
+                          <li><strong>Modalidade:</strong> Presencial</li>
+                          <li><strong>Localização:</strong> Cascavel</li>
+                          <li><strong>Período Atual:</strong> 2º período</li>
+                          <li><strong>Situação:</strong> Cursando</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                   
                   <div className="mb-8">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">

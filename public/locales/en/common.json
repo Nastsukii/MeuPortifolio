@@ -8,7 +8,7 @@
   },
   "home": {
     "title": "Pleasure, I am",
-    "titleBold": "Guilherme",
+    "titleBold": "Luiz Antonio",
     "subtitle": "Full Stack Developer who transforms ideas into functional digital solutions",
     "whatsapp": "WhatsApp",
     "hero": {
@@ -119,7 +119,7 @@
   },
   "about": {
     "title": "About Me",
-    "introduction": "Hello! I'm Guilherme Cirelli Lopes, a Systems Analysis and Development student, known for being hardworking and honorable in keeping my promises. My goal is to help entrepreneurs and professionals like you transform ideas into successful digital projects, with scalable, modern and functional solutions.",
+    "introduction": "Hello! I'm Luiz Antonio Comiran Bueno, a Systems Analysis and Development student, known for being hardworking and honorable in keeping my promises. My goal is to help entrepreneurs and professionals like you transform ideas into successful digital projects, with scalable, modern and functional solutions.",
     "education": {
       "title": "Education",
       "degree": "Undergraduate in Systems Analysis and Development",
@@ -200,7 +200,7 @@
     "sendMessage": "Send a Message",
     "name": "Name",
     "namePlaceholder": "Your full name",
-    "emailPlaceholder": "your@email.com",
+    "emailPlaceholder": "comiranbueno0@gmail.com",
     "message": "Message",
     "messagePlaceholder": "Tell me about your project or opportunity...",
     "sendButton": "Send Message",
@@ -232,7 +232,7 @@
   "footer": {
     "quickLinks": "Quick Links",
     "contact": "Contact",
-    "copyright": "© 2025 Guilherme Cirelli Lopes. All rights reserved. Built with Next.js and lots of ☕."
+    "copyright": "© 2025 Luiz Antonio Comiran Bueno. All rights reserved. Built with Next.js and lots of ☕."
   },
   "auth": {
     "signIn": "Sign in",
