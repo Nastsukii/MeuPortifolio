@@ -3,19 +3,23 @@
   "projects": [
     {
       "id": 1,
+      "title": "Vivieli Terapia",
       "titleKey": "projects.projectNumber",
       "descriptionKey": "home.projects.project1",
-      "techs": ["Next.js", "TypeScript", "Tailwind"],
+      "techs": ["HTML", "CSS", "JavaScript", "Netlify"],
       "featured": true,
-      "link": "/projetos"
+      "link": "https://vivieliterapia.netlify.app",
+      "screenshotUrl": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fvivieliterapia.netlify.app?w=800"
     },
     {
       "id": 2,
+      "title": "NotaIA",
       "titleKey": "projects.projectNumber",
       "descriptionKey": "home.projects.project2",
-      "techs": ["React", "Node.js", "MongoDB"],
+      "techs": ["React", "Node.js", "Netlify"],
       "featured": true,
-      "link": "/projetos"
+      "link": "https://notaia.netlify.app",
+      "screenshotUrl": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnotaia.netlify.app?w=800"
     },
     {
       "id": 3,

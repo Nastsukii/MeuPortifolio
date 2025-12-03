@@ -26,10 +26,14 @@ export const FeaturedProjects = () => {
               onClick={() => trackEvent('click', 'Project Card', `Project ${project.id} - Home`)}
               className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center relative">
-                <span className="text-white text-6xl font-bold opacity-20">
-                  {project.id}
-                </span>
+              <div className="aspect-video bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center relative overflow-hidden">
+                {project.screenshotUrl ? (
+                  <img src={project.screenshotUrl} alt={project.title ?? t(project.titleKey)} className="w-full h-full object-cover" />
+                ) : (
+                  <span className="text-white text-6xl font-bold opacity-20">
+                    {project.id}
+                  </span>
+                )}
                 {project.featured && (
                   <span className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">
                     ⭐ {t('projects.featuredBadge')}
@@ -38,7 +42,7 @@ export const FeaturedProjects = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
-                  {t(project.titleKey)} {project.id}
+                  {(project.title ?? t(project.titleKey))} {project.id}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {t(project.descriptionKey)}

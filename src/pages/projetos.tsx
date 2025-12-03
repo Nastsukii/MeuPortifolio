@@ -28,30 +28,30 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
   const projetos: Projeto[] = [
     {
       id: 1,
-      title: "Projeto 1",
+      title: "Vivieli Terapia",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
+      link: "https://vivieliterapia.netlify.app",
       funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
+        "Apresentação de serviços de terapia integrativa",
+        "Depoimentos e artigos em destaque",
+        "Contato e informações de atendimento",
+        "Layout responsivo"
       ],
-      tecnologias: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+      tecnologias: ["HTML", "CSS", "JavaScript", "Netlify"],
       featured: true
     },
     {
       id: 2,
-      title: "Projeto 2",
+      title: "NotaIA",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
+      link: "https://notaia.netlify.app",
       funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
+        "Leitura e análise de documentos",
+        "Fluxo de geração de arquivos",
+        "Interface simples para upload",
+        "Deploy contínuo"
       ],
-      tecnologias: ["React", "Node.js", "Express", "MongoDB"],
+      tecnologias: ["React", "Node.js", "Netlify"],
       featured: true
     },
     {
@@ -397,7 +397,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                       <div className="mb-2 pr-8">
                         <div className="mb-1">
                           <span className="font-semibold text-base">
-                            {t('projects.projectNumber')} {projeto.id}
+                            {projeto.title}
                           </span>
                         </div>
                       </div>
@@ -428,7 +428,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                 <div className="mb-6">
                   <div className="flex items-center gap-3">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                      {t('projects.projectNumber')} {projetoSelecionado.id}
+                      {projetoSelecionado.title}
                     </h2>
                     {projetoSelecionado.featured && (
                       <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full neon-shadow">
@@ -512,6 +512,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
             </main>
           </div>
         </div>
+
 
         {/* CTA Section */}
         <div className="max-w-5xl mx-auto px-6 py-12">
