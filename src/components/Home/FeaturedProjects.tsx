@@ -1,10 +1,24 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
+import Image from 'next/image';
 import { trackEvent } from '@/lib/analytics';
 import featuredProjectsData from '../../../content/data/featuredProjects.json';
 
 export const FeaturedProjects = () => {
   const { t } = useLanguage();
+
+  type FeaturedProject = {
+    id: number;
+    title?: string;
+    titleKey?: string;
+    descriptionKey: string;
+    techs: string[];
+    featured: boolean;
+    link: string;
+    screenshotUrl?: string;
+  };
+
+  const projects = featuredProjectsData.projects as FeaturedProject[];
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -19,7 +33,7 @@ export const FeaturedProjects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {featuredProjectsData.projects.map((project) => (
+          {projects.map((project) => (
             <Link
               key={project.id}
               href={project.link}
@@ -28,7 +42,12 @@ export const FeaturedProjects = () => {
             >
               <div className="aspect-video bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center relative overflow-hidden">
                 {project.screenshotUrl ? (
-                  <img src={project.screenshotUrl} alt={project.title ?? t(project.titleKey)} className="w-full h-full object-cover" />
+                  <Image
+                    src={project.screenshotUrl}
+                    alt={project.title ?? t(project.titleKey || 'projects.projectNumber')}
+                    fill
+                    className="object-cover"
+                  />
                 ) : (
                   <span className="text-white text-6xl font-bold opacity-20">
                     {project.id}
@@ -42,7 +61,7 @@ export const FeaturedProjects = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
-                  {(project.title ?? t(project.titleKey))} {project.id}
+                  {(project.title ?? t(project.titleKey || 'projects.projectNumber'))} {project.id}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {t(project.descriptionKey)}
