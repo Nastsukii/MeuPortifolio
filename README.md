@@ -1,4 +1,4 @@
-# Portfolio Luiz Antonio Comiran Bueno
+# Portfolio  
 
 Um portfolio pessoal moderno e responsivo desenvolvido com Next.js, TypeScript e Tailwind CSS, implementando as melhores práticas de desenvolvimento web.
 

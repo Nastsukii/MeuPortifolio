@@ -93,7 +93,7 @@ const Blog = ({ businessSettings, generalSettings }: BlogProps) => {
                       {/* Content */}
                       <div className="ml-16 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                          <span className="text-sm font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
+                          <span className="text-sm font-semibold text-gray-800 dark:text-gray-100 bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
                             {item.date}
                           </span>
                         </div>

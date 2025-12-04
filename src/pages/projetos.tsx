@@ -32,12 +32,33 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       link: "https://vivieliterapia.netlify.app",
       funcionalidades: [
-        "Apresentação de serviços de terapia integrativa",
-        "Depoimentos e artigos em destaque",
-        "Contato e informações de atendimento",
-        "Layout responsivo"
+        "Homepage com Hero e serviços",
+        "Blog em Markdown com categorias/tags",
+        "Tema claro/escuro",
+        "Responsividade (desktop/mobile)",
+        "SEO básico (meta, OG/Twitter)",
+        "Imagens otimizadas e code splitting",
+        "Deploy CI/CD (Vercel/Netlify)",
+        "LGPD e HTTPS"
       ],
-      tecnologias: ["HTML", "CSS", "JavaScript", "Netlify"],
+      tecnologias: [
+        "Next.js 14",
+        "React 18",
+        "Tailwind CSS",
+        "CSS",
+        "ESLint",
+        "next-themes",
+        "react-icons",
+        "gray-matter",
+        "remark",
+        "date-fns",
+        "Markdown",
+        "JSON",
+        "Netlify",
+        "Vercel",
+        "Git",
+        "npm/yarn"
+      ],
       featured: true
     },
     {
@@ -51,7 +72,19 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
         "Interface simples para upload",
         "Deploy contínuo"
       ],
-      tecnologias: ["React", "Node.js", "Netlify"],
+      tecnologias: [
+        "Next.js App Router",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostCSS + Autoprefixer",
+        "ESLint",
+        "Framer Motion",
+        "Lucide React",
+        "clsx",
+        "Netlify",
+        ".env.local"
+      ],
       featured: true
     },
     {
@@ -350,7 +383,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                     aria-label={`Selecionar ${t('projects.projectNumber')} ${projeto.id}`}
                     className={`w-full text-left px-5 py-4 rounded-lg transition-all duration-200 shadow-lg relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary ${
                       projetoSelecionado.id === projeto.id
-                        ? 'bg-primary text-primary-foreground shadow-primary/30'
+                        ? 'bg-primary text-primary-foreground border-2 border-primary shadow-primary/30'
                         : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 shadow-gray-300/50 dark:shadow-gray-900/50'
                     }`}
                   >
@@ -376,9 +409,9 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                         <svg 
                           className={`w-4 h-4 ${
                             isLiked(projeto.id) 
-                              ? 'text-white' 
+                              ? 'text-white dark:text-primary-foreground' 
                               : projetoSelecionado.id === projeto.id
-                              ? 'text-white'
+                              ? 'text-white dark:text-primary-foreground'
                               : 'text-gray-600 dark:text-gray-300'
                           }`}
                           fill={isLiked(projeto.id) ? 'currentColor' : 'none'} 
@@ -396,7 +429,13 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
 
                       <div className="mb-2 pr-8">
                         <div className="mb-1">
-                          <span className="font-semibold text-base">
+                          <span
+                            className={`font-semibold text-base ${
+                              projetoSelecionado.id === projeto.id
+                                ? 'text-[#808080] dark:text-[#808080]'
+                                : ''
+                            }`}
+                          >
                             {projeto.title}
                           </span>
                         </div>
@@ -407,7 +446,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                             key={index}
                             className={`text-xs px-2 py-0.5 rounded ${
                               projetoSelecionado.id === projeto.id
-                                ? 'bg-white/20 text-white'
+                                ? 'bg-white/20 text-[#808080] dark:text-[#808080]'
                                 : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'
                             }`}
                           >
@@ -478,7 +517,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                         href={projetoSelecionado.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-semibold text-lg"
+                        className="inline-flex items-center gap-2 text-gray-800 dark:text-white underline hover:text-primary font-semibold text-lg"
                       >
                         {t('projects.accessProject')}
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -501,7 +540,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                     {projetoSelecionado.tecnologias.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                        className="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-gray-800 dark:text-gray-100 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
                       >
                         {tech}
                       </span>

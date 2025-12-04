@@ -34,7 +34,7 @@ export const ServicesSection = () => {
                 {service.techs.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-sm rounded-full font-medium"
+                    className="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-gray-700 dark:text-gray-300 text-sm rounded-full font-medium"
                   >
                     {tech}
                   </span>

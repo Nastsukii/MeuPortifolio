@@ -4,17 +4,26 @@
     {
       "id": "item1",
       "dateKey": "home.timeline.item1.date",
-      "titleKey": "home.timeline.item1.title"
+      "titleKey": "home.timeline.item1.title",
+      "sortIndex": 1,
+      "dateStart": "2024-01",
+      "isCurrent": false
     },
     {
       "id": "item2",
       "dateKey": "home.timeline.item2.date",
-      "titleKey": "home.timeline.item2.title"
+      "titleKey": "home.timeline.item2.title",
+      "sortIndex": 3,
+      "dateStart": "2024-08",
+      "isCurrent": true
     },
     {
       "id": "item3",
       "dateKey": "home.timeline.item3.date",
-      "titleKey": "home.timeline.item3.title"
+      "titleKey": "home.timeline.item3.title",
+      "sortIndex": 2,
+      "dateStart": "2025-07",
+      "isCurrent": false
     }
   ]
 }

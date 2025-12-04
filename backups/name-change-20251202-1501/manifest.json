@@ -8,7 +8,7 @@
       "occurrences": [
         { "line": 3, "text": "\"brandName\": \"Luiz Antonio Comiran Bueno\"," },
         { "line": 11, "text": "\"brandName\": \"Luiz Antonio Comiran Bueno\"," },
-        { "line": 20, "text": "\"footerText\": \"© 2025 Luiz Antonio Comiran Bueno. Todos os direitos reservados. Construído com Next.js e muito ☕.\"," },
+        { "line": 20, "text": "\"footerText\": \"© 2025 Lacb. Todos os direitos reservados. Construído com Next.js e muito ☕.\"," },
         { "line": 163, "text": "message: \"Portfolio pessoal - Luiz Antonio Comiran Bueno\"" }
       ]
     },
@@ -24,7 +24,7 @@
     ]},
     { "path": "public/locales/en/common.json", "occurrences": [
       { "line": 122, "text": "Hello! I'm Luiz Antonio Comiran Bueno" },
-      { "line": 235, "text": "© 2025 Luiz Antonio Comiran Bueno. All rights reserved." }
+      { "line": 235, "text": "© 2025 Lacb. All rights reserved." }
     ]},
     { "path": "public/home.json", "occurrences": [
       { "line": 25, "text": "\"alt\": \"Foto de Luiz Antonio Comiran Bueno\"" }

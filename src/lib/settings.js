@@ -17,7 +17,7 @@ const businessSettingsEN = {
 
 const generalSettings = {
   "siteUrl": "https://luiz-antonio-comiran-bueno.vercel.app",
-  "footerText": "© 2025 Luiz Antonio Comiran Bueno. Todos os direitos reservados. Construído com Next.js e muito ☕.",
+  "footerText": "© 2025 Lacb. Todos os direitos reservados. Construído com Next.js e muito ☕.",
   "postsToShow": 6,
   "homeCategory": "Development",
   "cookieConsent": false,

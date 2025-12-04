@@ -18,13 +18,23 @@ export const TimelineSection = () => {
         </div>
 
         <div className="space-y-6 mb-12">
-          {timelineData.timeline.map((item) => (
+          {([...timelineData.timeline]
+            .sort((a, b) => {
+              const aDate = a.dateStart ? new Date(`${a.dateStart}-01`) : null;
+              const bDate = b.dateStart ? new Date(`${b.dateStart}-01`) : null;
+              if (aDate && bDate) return aDate.getTime() - bDate.getTime();
+              if (aDate) return -1;
+              if (bDate) return 1;
+              return (a.sortIndex ?? 0) - (b.sortIndex ?? 0);
+            })
+            .sort((a, b) => (a.isCurrent ? 1 : 0) - (b.isCurrent ? 1 : 0)))
+            .map((item) => (
             <div
               key={item.id}
               className="flex gap-6 items-start"
             >
               <div className="flex-shrink-0 w-24 pt-1">
-                <span className="text-sm font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
+                <span className="text-sm font-semibold text-gray-800 dark:text-gray-100 bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
                   {t(item.dateKey)}
                 </span>
               </div>

@@ -20,7 +20,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
   
   // Usa a tradução diretamente do contexto ao invés de getBusinessSettings
   const businessSettings = {
-    brandName: "Luiz Antonio Comiran Bueno",
+    brandName: "Lacb (Footer.tsx)",
     brandDescription: t('home.subtitle'),
     brandEmail: "comiranbueno0@gmail.com",
     brandPhone: "+55 45 99938-3320"
@@ -161,12 +161,9 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {t('footer.copyright')}
-            </p>
-            <p className="text-gray-500 dark:text-gray-500 text-sm">
-              © {new Date().getFullYear()} {businessSettings.brandName}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-center">
+            <p className="text-gray-600 dark:text-gray-400 text-sm text-center">
+              <span dangerouslySetInnerHTML={{ __html: t('footer.copyright') }} />
             </p>
           </div>
         </div>
