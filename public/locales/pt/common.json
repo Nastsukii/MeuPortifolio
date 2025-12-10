@@ -23,7 +23,7 @@
     },
     "about": {
       "title": "Quem sou eu?",
-      "description": "Sou um desenvolvedor Full-Stack em formação, de 18 anos. Desde 2023 venho construindo projetos que unem criatividade, funcionalidade e código.",
+      "description": "Sou um desenvolvedor Full-Stack em formação, de 19 anos. Desde 2023 venho construindo projetos que unem criatividade, funcionalidade e código.",
       "cta": "Conheça Minha História"
     },
     "services": {
@@ -62,8 +62,8 @@
     "projects": {
       "title": "Projetos em Destaque",
       "subtitle": "Alguns dos meus melhores trabalhos",
-      "project1": "Sistema completo com Node.js e JavaScript",
-      "project2": "Aplicações interativas e jogos",
+      "project1": "Homepage com Hero, Blog em Markdown, Tema claro/escuro e SEO básico.",
+      "project2": "Leitura e análise de documentos com IA, fluxo de geração de arquivos e interface simples.",
       "project3": "Sistemas CRUD e APIs",
       "viewAll": "Ver Todos os Projetos"
     },
@@ -86,6 +86,14 @@
         "date": "Jul 2025 - Jul 2028",
         "title": "Graduação em ADS"
       },
+      "item4": {
+        "date": "Mar 2023 - Maio 2024",
+        "title": "Dev Club"
+      },
+      "item5": {
+        "date": "Fev 2024 - Jun 2025",
+        "title": "Técnico em DS"
+      },
       "viewAll": "Ver Linha do Tempo Completa"
     },
     "cta": {
@@ -104,22 +112,29 @@
     },
     "technologies": {
       "nextjs": "Next.js",
+      "openai": "OpenAI",
+      "typescript": "TypeScript",
       "react": "React",
       "javascript": "JavaScript",
+      "mongodb": "MongoDB",
+      "postgresql": "PostgreSQL",
+      "sqlserver": "SQL Server",
       "nodejs": "Node.js",
+      "netlify": "Netlify",
+      "vercel": "Vercel",
+      "python": "Python",
       "express": "Express",
-      "apis": "APIs REST",
       "html5": "HTML5",
       "css3": "CSS3",
+      "c": "C",
       "sql": "SQL",
       "github": "GitHub",
-      "netlify": "Netlify",
       "trello": "Trello"
     }
   },
   "about": {
     "title": "Sobre Mim",
-    "introduction": "Olá! Sou Luiz Antonio Comiran Bueno, desenvolvedor Full-Stack em formação, de 18 anos, apaixonado por tecnologia. Desde 2023 venho construindo projetos que unem criatividade, funcionalidade e código. Valorizo o trabalho em equipe, a comunicação clara e a busca constante por melhorias. Quero desenvolver soluções tecnológicas que gerem impacto real, evoluindo como profissional de software.",
+    "introduction": "Olá! Sou Luiz Antonio Comiran Bueno, desenvolvedor Full-Stack em formação, de 19 anos, apaixonado por tecnologia. Desde 2023 venho construindo projetos que unem criatividade, funcionalidade e código. Valorizo o trabalho em equipe, a comunicação clara e a busca constante por melhorias. Quero desenvolver soluções tecnológicas que gerem impacto real, evoluindo como profissional de software.",
     "education": {
       "title": "Educação",
       "degree": "TADS na Univel (Presencial)",
@@ -284,9 +299,19 @@
     },
     "timeline": [
       {
+        "date": "Mar 2023 - Maio 2024",
+        "title": "Dev Club - Programação de Computadores",
+        "description": "Curso intensivo onde iniciei minha jornada na programação, aprendendo os fundamentos e tecnologias web modernas."
+      },
+      {
         "date": "Jan 2024 - Presente",
         "title": "Programador Freelancer",
         "description": "Atuo como autônomo desenvolvendo sistemas CRUD com Node.js e JavaScript puro, além de criar aplicações interativas e jogos. Implemento filtros dinâmicos e utilizo Git/GitHub para versionamento."
+      },
+      {
+        "date": "Fev 2024 - Jun 2025",
+        "title": "Técnico em Desenvolvimento de Sistemas",
+        "description": "Curso técnico no CEEP Pedro Boaretto Neto. Aprendizado prático de lógica de programação, banco de dados e desenvolvimento de aplicações desktop e web."
       },
       {
         "date": "Ago 2024 - Presente",
@@ -297,16 +322,6 @@
         "date": "Jul 2025 - Jul 2028",
         "title": "TADS na Univel (Presencial)",
         "description": "Cursando Tecnologia em Análise e Desenvolvimento de Sistemas na Univel (Presencial). Foco em aprofundar conhecimentos em engenharia de software, arquitetura de sistemas e desenvolvimento full-stack."
-      },
-      {
-        "date": "Fev 2024 - Jun 2025",
-        "title": "Técnico em Desenvolvimento de Sistemas",
-        "description": "Curso técnico no CEEP Pedro Boaretto Neto. Aprendizado prático de lógica de programação, banco de dados e desenvolvimento de aplicações desktop e web."
-      },
-      {
-        "date": "Mar 2023 - Maio 2024",
-        "title": "Dev Club - Programação de Computadores",
-        "description": "Curso intensivo onde iniciei minha jornada na programação, aprendendo os fundamentos e tecnologias web modernas."
       }
     ]
   }

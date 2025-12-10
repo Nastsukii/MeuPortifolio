@@ -20,7 +20,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
   
   // Usa a tradução diretamente do contexto ao invés de getBusinessSettings
   const businessSettings = {
-    brandName: "Lacb (Footer.tsx)",
+    brandName: "Lacb",
     brandDescription: t('home.subtitle'),
     brandEmail: "comiranbueno0@gmail.com",
     brandPhone: "+55 45 99938-3320"

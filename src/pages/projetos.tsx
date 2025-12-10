@@ -383,7 +383,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                     aria-label={`Selecionar ${t('projects.projectNumber')} ${projeto.id}`}
                     className={`w-full text-left px-5 py-4 rounded-lg transition-all duration-200 shadow-lg relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary ${
                       projetoSelecionado.id === projeto.id
-                        ? 'bg-primary text-primary-foreground border-2 border-primary shadow-primary/30'
+                        ? 'bg-primary text-black border-2 border-primary shadow-primary/30'
                         : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 shadow-gray-300/50 dark:shadow-gray-900/50'
                     }`}
                   >
@@ -432,7 +432,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                           <span
                             className={`font-semibold text-base ${
                               projetoSelecionado.id === projeto.id
-                                ? 'text-[#808080] dark:text-[#808080]'
+                                ? 'text-black dark:text-black'
                                 : ''
                             }`}
                           >
@@ -446,7 +446,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                             key={index}
                             className={`text-xs px-2 py-0.5 rounded ${
                               projetoSelecionado.id === projeto.id
-                                ? 'bg-white/20 text-[#808080] dark:text-[#808080]'
+                                ? 'bg-white/20 text-black dark:text-black'
                                 : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'
                             }`}
                           >

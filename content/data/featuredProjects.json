@@ -10,13 +10,8 @@
         "Next.js 14",
         "React 18",
         "Tailwind CSS",
-        "next-themes",
-        "react-icons",
-        "gray-matter",
-        "remark",
-        "date-fns",
-        "Netlify",
-        "Vercel"
+        "Markdown",
+        "Netlify"
       ],
       "featured": true,
       "link": "https://vivieliterapia.netlify.app",
@@ -27,7 +22,14 @@
       "title": "NotaIA",
       "titleKey": "projects.projectNumber",
       "descriptionKey": "home.projects.project2",
-      "techs": ["React", "Node.js", "Netlify"],
+      "techs": [
+        "Next.js App Router",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Netlify"
+      ],
       "featured": true,
       "link": "https://notaia.netlify.app",
       "screenshotUrl": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnotaia.netlify.app?w=800"
