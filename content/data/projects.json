@@ -1,0 +1,177 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Vivieli Terapia",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "https://vivieliterapia.netlify.app",
+      "funcionalidades": [
+        "Homepage com Hero e serviços",
+        "Blog em Markdown com categorias/tags",
+        "Tema claro/escuro",
+        "Responsividade (desktop/mobile)",
+        "SEO básico (meta, OG/Twitter)",
+        "Imagens otimizadas e code splitting",
+        "Deploy CI/CD (Vercel/Netlify)",
+        "LGPD e HTTPS"
+      ],
+      "tecnologias": [
+        "Next.js 14",
+        "React 18",
+        "Tailwind CSS",
+        "CSS",
+        "ESLint",
+        "next-themes",
+        "react-icons",
+        "gray-matter",
+        "remark",
+        "date-fns",
+        "Markdown",
+        "JSON",
+        "Netlify",
+        "Vercel",
+        "Git",
+        "npm/yarn"
+      ],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "NotaIA",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "https://notaia.netlify.app",
+      "funcionalidades": [
+        "Leitura e análise de documentos",
+        "Fluxo de geração de arquivos",
+        "Interface simples para upload",
+        "Deploy contínuo"
+      ],
+      "tecnologias": [
+        "Next.js App Router",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostCSS + Autoprefixer",
+        "ESLint",
+        "Framer Motion",
+        "Lucide React",
+        "clsx",
+        "Netlify",
+        ".env.local"
+      ],
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Projeto 3",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "#",
+      "funcionalidades": [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      "tecnologias": ["Next.js", "PostgreSQL", "Prisma", "API REST"],
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Projeto 4",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "#",
+      "funcionalidades": [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      "tecnologias": ["Node.js", "Express", "JWT", "Swagger"],
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Projeto 5",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "#",
+      "funcionalidades": [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      "tecnologias": ["React", "CSS3", "JavaScript", "HTML5"],
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Projeto 6",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "#",
+      "funcionalidades": [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      "tecnologias": ["Next.js", "API REST", "Tailwind", "TypeScript"],
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Projeto 7",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "#",
+      "funcionalidades": [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      "tecnologias": ["React", "Firebase", "Material UI", "JavaScript"],
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "Projeto 8",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "#",
+      "funcionalidades": [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      "tecnologias": ["Node.js", "SQL", "Express", "Bootstrap"],
+      "featured": false
+    },
+    {
+      "id": 9,
+      "title": "Projeto 9",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "#",
+      "funcionalidades": [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      "tecnologias": ["React", "GraphQL", "Apollo", "Styled Components"],
+      "featured": false
+    },
+    {
+      "id": 10,
+      "title": "Projeto 10",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "link": "#",
+      "funcionalidades": [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      "tecnologias": ["Next.js", "Vercel", "Netlify", "Git"],
+      "featured": false
+    }
+  ]
+}

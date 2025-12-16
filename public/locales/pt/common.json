@@ -3,8 +3,8 @@
     "home": "Início",
     "about": "Sobre",
     "projects": "Projetos",
-    "blog": "Blog",
-    "contact": "Contato"
+    "blog": "Blog"
+
   },
   "home": {
     "title": "Prazer, eu sou",
@@ -299,19 +299,9 @@
     },
     "timeline": [
       {
-        "date": "Mar 2023 - Maio 2024",
-        "title": "Dev Club - Programação de Computadores",
-        "description": "Curso intensivo onde iniciei minha jornada na programação, aprendendo os fundamentos e tecnologias web modernas."
-      },
-      {
-        "date": "Jan 2024 - Presente",
-        "title": "Programador Freelancer",
-        "description": "Atuo como autônomo desenvolvendo sistemas CRUD com Node.js e JavaScript puro, além de criar aplicações interativas e jogos. Implemento filtros dinâmicos e utilizo Git/GitHub para versionamento."
-      },
-      {
-        "date": "Fev 2024 - Jun 2025",
-        "title": "Técnico em Desenvolvimento de Sistemas",
-        "description": "Curso técnico no CEEP Pedro Boaretto Neto. Aprendizado prático de lógica de programação, banco de dados e desenvolvimento de aplicações desktop e web."
+        "date": "Jul 2025 - Jul 2028",
+        "title": "TADS na Univel (Presencial)",
+        "description": "Cursando Tecnologia em Análise e Desenvolvimento de Sistemas na Univel (Presencial). Foco em aprofundar conhecimentos em engenharia de software, arquitetura de sistemas e desenvolvimento full-stack."
       },
       {
         "date": "Ago 2024 - Presente",
@@ -319,9 +309,19 @@
         "description": "Responsável pela execução de processos administrativos, organização de documentos, rotinas de análise e emissão de certidões. Desenvolvo habilidades de resolução de problemas e trabalho em equipe."
       },
       {
-        "date": "Jul 2025 - Jul 2028",
-        "title": "TADS na Univel (Presencial)",
-        "description": "Cursando Tecnologia em Análise e Desenvolvimento de Sistemas na Univel (Presencial). Foco em aprofundar conhecimentos em engenharia de software, arquitetura de sistemas e desenvolvimento full-stack."
+        "date": "Fev 2024 - Jun 2025",
+        "title": "Técnico em Desenvolvimento de Sistemas",
+        "description": "Curso técnico no CEEP Pedro Boaretto Neto. Aprendizado prático de lógica de programação, banco de dados e desenvolvimento de aplicações desktop e web."
+      },
+      {
+        "date": "Jan 2024 - Presente",
+        "title": "Programador Freelancer",
+        "description": "Atuo como autônomo desenvolvendo sistemas CRUD com Node.js e JavaScript puro, além de criar aplicações interativas e jogos. Implemento filtros dinâmicos e utilizo Git/GitHub para versionamento."
+      },
+      {
+        "date": "Mar 2023 - Maio 2024",
+        "title": "Dev Club - Programação de Computadores",
+        "description": "Curso intensivo onde iniciei minha jornada na programação, aprendendo os fundamentos e tecnologias web modernas."
       }
     ]
   }

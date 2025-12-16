@@ -62,10 +62,10 @@ export const Footer = ({ className = "" }: FooterProps) => {
   return (
     <footer className={`bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 ${className}`}>
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="flex flex-col items-center gap-8 text-center">
           {/* Brand Section */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
+          <div className="flex flex-col items-center w-full">
+            <div className="flex items-center justify-center gap-3 mb-4">
               <Image
                 src="/img/foto perfil.jpeg"
                 alt={businessSettings.brandName}
@@ -77,28 +77,12 @@ export const Footer = ({ className = "" }: FooterProps) => {
                 {businessSettings.brandName}
               </span>
             </div>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md">
+            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md text-center mx-auto">
               {businessSettings.brandDescription}
             </p>
             
-            {/* Social Links */}
-            <div className="flex gap-4">
-              {linkTreeData.linkTree?.filter((link: any) => link.icon !== 'FaEnvelope').map((link: any, index: number) => {
-                const IconComponent = getIcon(link.icon);
-                return (
-                  <a
-                    key={index}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
-                    aria-label={link.label}
-                  >
-                    <IconComponent />
-                  </a>
-                );
-              })}
-            </div>
+
+
           </div>
 
           {/* Quick Links */}
@@ -125,38 +109,11 @@ export const Footer = ({ className = "" }: FooterProps) => {
                   {t('navigation.blog')}
                 </Link>
               </li>
-              <li>
-                <Link href="/contato" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors duration-200">
-                  {t('navigation.contact')}
-                </Link>
-              </li>
+
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.contact')}</h3>
-            <div className="space-y-2">
-              <p className="text-gray-600 dark:text-gray-300">
-                <a 
-                  href="https://wa.me/5543991575781" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
-                >
-                  {businessSettings.brandPhone}
-                </a>
-              </p>
-              <p className="text-gray-600 dark:text-gray-300">
-                <a 
-                  href="mailto:comiranbueno0@gmail.com" 
-                  className="hover:text-primary transition-colors duration-200"
-                >
-                  comiranbueno0@gmail.com
-                </a>
-              </p>
-            </div>
-          </div>
+
         </div>
 
         {/* Bottom Section */}

@@ -4,7 +4,7 @@ import { ServicesSection } from '@/components/Home/ServicesSection';
 import { FeaturedProjects } from '@/components/Home/FeaturedProjects';
 import { TechStack } from '@/components/Home/TechStack';
 import { TimelineSection } from '@/components/Home/TimelineSection';
-import { CTASection } from '@/components/Home/CTASection';
+
 import { Project, AboutMe as TAboutMe } from '@/types/Home';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
@@ -118,8 +118,7 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
         {/* Timeline Section */}
         <TimelineSection />
 
-        {/* CTA Final */}
-        <CTASection />
+
       </div>
     </>
   );

@@ -84,13 +84,6 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
           >
             {t('navigation.blog')}
           </Link>
-          <Link
-            href="/contato"
-            onClick={onClose}
-            className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200"
-          >
-            {t('navigation.contact')}
-          </Link>
 
           {/* Botões de Login */}
           {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && (

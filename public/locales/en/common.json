@@ -75,16 +75,24 @@
       "title": "My Journey",
       "subtitle": "Where I came from and where I'm going",
       "item1": {
-        "date": "Feb 2024",
-        "title": "Starting in ADS"
+        "date": "Jan 2024 - Present",
+        "title": "Freelance Programmer"
       },
       "item2": {
-        "date": "Jan 2025",
-        "title": "A.Yoshii Engenharia"
+        "date": "Aug 2024 - Present",
+        "title": "Registry Office Assistant"
       },
       "item3": {
-        "date": "Jul 2025",
-        "title": "Specialized Mentorship"
+        "date": "Jul 2025 - Jul 2028",
+        "title": "Degree in ADS"
+      },
+      "item4": {
+        "date": "Mar 2023 - May 2024",
+        "title": "Dev Club"
+      },
+      "item5": {
+        "date": "Feb 2024 - Jun 2025",
+        "title": "Systems Development Technician"
       },
       "viewAll": "View Complete Timeline"
     },
@@ -104,16 +112,23 @@
     },
     "technologies": {
       "nextjs": "Next.js",
+      "openai": "OpenAI",
+      "typescript": "TypeScript",
       "react": "React",
       "javascript": "JavaScript",
+      "mongodb": "MongoDB",
+      "postgresql": "PostgreSQL",
+      "sqlserver": "SQL Server",
       "nodejs": "Node.js",
+      "netlify": "Netlify",
+      "vercel": "Vercel",
+      "python": "Python",
       "express": "Express",
-      "apis": "REST APIs",
       "html5": "HTML5",
       "css3": "CSS3",
+      "c": "C",
       "sql": "SQL",
       "github": "GitHub",
-      "netlify": "Netlify",
       "trello": "Trello"
     }
   },
