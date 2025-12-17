@@ -26,20 +26,7 @@ function App({ Component, pageProps }: AppProps) {
   }, [router.events]);
 
   // Se não há chave do Clerk, renderiza sem autenticação
-  if (!PUBLISHABLE_KEY) {
-    return (
-      <LanguageProvider>
-        <ThemeProvider>
-          <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-          </Head>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
-      </LanguageProvider>
-    );
-  }
+
 
   return (
     <LanguageProvider>
