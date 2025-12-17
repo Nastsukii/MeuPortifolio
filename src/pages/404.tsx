@@ -1,12 +1,9 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Roboto } from 'next/font/google';
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: '500',
-});
+
+
 
 const NotFound: NextPage = () => {
   return (
@@ -22,7 +19,7 @@ const NotFound: NextPage = () => {
         </p>
         <Link
           href="/"
-          className={`${roboto.className} p-4 bg-h-blue-500 rounded-xl text-black mt-5 md:mt-12 md:text-xl w-fit`}
+          className={`font-roboto p-4 bg-h-blue-500 rounded-xl text-black mt-5 md:mt-12 md:text-xl w-fit`}
         >
           Go to Home Page
         </Link>

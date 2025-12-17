@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import { Roboto } from 'next/font/google';
+
 import { Menu } from './Menu';
 import { useCallback, useState } from 'react';
 import { MenuIcon } from '@/components/icons/MenuIcon';
@@ -21,10 +21,7 @@ const SignedIn = dynamic(() => import("@clerk/nextjs").then((mod) => mod.SignedI
 // @ts-expect-error
 const SignedOut = dynamic(() => import("@clerk/nextjs").then((mod) => mod.SignedOut), { ssr: false });
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: '500',
-});
+
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +40,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`${roboto.className} bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-20 shadow-sm`}
+      className={`font-roboto bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-20 shadow-sm`}
     >
       {/* Download Resume Button */}
       <div className="flex items-center">

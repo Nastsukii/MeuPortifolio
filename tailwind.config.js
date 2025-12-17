@@ -60,6 +60,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter Variable', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
     },
   },

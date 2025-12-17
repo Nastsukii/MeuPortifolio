@@ -1,14 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Roboto } from 'next/font/google';
+
 import { AboutMe as TAboutMe } from '@/types/Home';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: '400',
-});
+
 
 interface AboutMeProps {
   aboutMe: TAboutMe;
@@ -25,7 +22,7 @@ export const Inicio = ({ aboutMe }: AboutMeProps) => {
   {title.default} <strong>{title.bold}</strong>
 </h1>
         <div className="mb-12">
-  <h2 className={`${roboto.className} mb-12`}>
+  <h2 className={`font-roboto mb-12`}>
     Web developer passionate about delivering efficient and practical solutions.
   </h2>
  <Link
