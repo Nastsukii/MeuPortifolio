@@ -39,6 +39,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.2",
     "cross-env": "^10.0.0"
   }
 }

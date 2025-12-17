@@ -10,3 +10,6 @@
   port = 8888
   framework = "next"
   functions = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
