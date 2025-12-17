@@ -23,13 +23,7 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
       </Head>
       <body className="bg-white dark:bg-gray-900">
-        {/* Formulário estático oculto para Netlify Forms detectar durante o build */}
-        <form name="contato" method="POST" data-netlify="true" hidden>
-          <input type="hidden" name="form-name" value="contato" />
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message"></textarea>
-        </form>
+
         
         <Main />
         <NextScript />
