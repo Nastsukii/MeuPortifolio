@@ -1,6 +1,6 @@
 # Portfolio  
 
-Um portfolio pessoal moderno e responsivo desenvolvido com Next.js, TypeScript e Tailwind CSS, implementando as melhores práticas de desenvolvimento web.
+1 Um portfolio pessoal moderno e responsivo desenvolvido com Next.js, TypeScript e Tailwind CSS, implementando as melhores práticas de desenvolvimento web.
 
 ## 🚀 Características
 
