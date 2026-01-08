@@ -103,8 +103,6 @@ export const Header = () => {
         >
           {t('navigation.blog')}
         </Link>
-<<<<<<< HEAD
-=======
         <Link
           href="/contato"
           className={`leaf-indicator px-4 py-2 rounded-md transition-colors duration-200 ${
@@ -115,7 +113,6 @@ export const Header = () => {
         >
           {t('navigation.contact')}
         </Link>
->>>>>>> ebc7e84 (Colocando alguns projetos e moldura nova)
       </nav>
 
       {/* Right side actions */}
