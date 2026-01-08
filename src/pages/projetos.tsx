@@ -63,6 +63,60 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
     },
     {
       id: 2,
+      title: "Decisorio",
+      videoUrl: "", // Sem vídeo por enquanto
+      link: "https://decisorio.netlify.app",
+      funcionalidades: [
+        "Questionário de 6 perguntas para tomada de decisão",
+        "Algoritmo de pontuação que gera resultado (Go / Caution / Stop)",
+        "Privacidade: sem banco de dados — respostas não são salvas no servidor",
+        "Resultado direto e imediato (exibição na tela)",
+        "Suporte bilingue (EN e PT-BR)",
+        "Armazenamento temporário no navegador via localStorage"
+      ],
+      tecnologias: [
+        "Next.js (App Router)",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Lucide React (ícones)",
+        "ESLint (qualidade de código)"
+      ],
+      featured: true
+    },
+    {
+      id: 3,
+      title: "highticonversionfunnel",
+      videoUrl: "", // Sem vídeo por enquanto
+      link: "https://highticonversionfunnel.netlify.app",
+      funcionalidades: [
+        "Landing page otimizada para conversão (funil)",
+        "Página de agendamento (/scheduling) e confirmação (/confirmation)",
+        "Multilíngue (PT-BR e EN) com troca instantânea",
+        "Design responsivo e Dark Mode",
+        "SEO configurado e otimizações de performance (Next.js)"
+      ],
+      tecnologias: ["Next.js (App Router)", "TypeScript", "React", "Tailwind CSS", "Lucide React (ícones)"],
+      featured: true
+    },
+    {
+      id: 4,
+      title: "To Do List",
+      videoUrl: "", // Sem vídeo por enquanto
+      link: "https://to-do-list-lacb-test-1.netlify.app",
+      funcionalidades: [
+        "Adicionar tarefas via campo de entrada e botão",
+        "Listar tarefas criadas dinamicamente",
+        "Marcar/alternar tarefa como concluída (toggle)",
+        "Deletar tarefas",
+        "Persistência das tarefas no navegador usando localStorage",
+        "Indicadores visuais (estilos e imagens) e animação de aparição de ícones ao passar o mouse"
+      ],
+      tecnologias: ["HTML (estrutura)", "CSS (estilos)", "JavaScript (Vanilla JS)", "Web Storage API (localStorage)"],
+      featured: false
+    },
+    {
+      id: 5,
       title: "NotaIA",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       link: "https://notaia.netlify.app",
@@ -85,118 +139,6 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
         "Netlify",
         ".env.local"
       ],
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Projeto 3",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
-      funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
-      ],
-      tecnologias: ["Next.js", "PostgreSQL", "Prisma", "API REST"],
-      featured: true
-    },
-    {
-      id: 4,
-      title: "Projeto 4",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
-      funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
-      ],
-      tecnologias: ["Node.js", "Express", "JWT", "Swagger"],
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Projeto 5",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
-      funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
-      ],
-      tecnologias: ["React", "CSS3", "JavaScript", "HTML5"],
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Projeto 6",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
-      funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
-      ],
-      tecnologias: ["Next.js", "API REST", "Tailwind", "TypeScript"],
-      featured: false
-    },
-    {
-      id: 7,
-      title: "Projeto 7",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
-      funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
-      ],
-      tecnologias: ["React", "Firebase", "Material UI", "JavaScript"],
-      featured: false
-    },
-    {
-      id: 8,
-      title: "Projeto 8",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
-      funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
-      ],
-      tecnologias: ["Node.js", "SQL", "Express", "Bootstrap"],
-      featured: false
-    },
-    {
-      id: 9,
-      title: "Projeto 9",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
-      funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
-      ],
-      tecnologias: ["React", "GraphQL", "Apollo", "Styled Components"],
-      featured: false
-    },
-    {
-      id: 10,
-      title: "Projeto 10",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "#",
-      funcionalidades: [
-        "Funcionalidade 1",
-        "Funcionalidade 2",
-        "Funcionalidade 3",
-        "Funcionalidade 4"
-      ],
-      tecnologias: ["Next.js", "Vercel", "Netlify", "Git"],
       featured: false
     }
   ];

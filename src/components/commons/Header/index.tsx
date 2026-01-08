@@ -65,12 +65,12 @@ export const Header = () => {
       </button>
 
       {/* Desktop navigation */}
-      <nav className="hidden md:flex items-center gap-2 text-md">
+      <nav className="hidden md:flex items-center gap-6 text-md">
         <Link
           href="/"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${
+          className={`leaf-indicator px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/'
-              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
+              ? 'active text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
@@ -78,9 +78,9 @@ export const Header = () => {
         </Link>
         <Link
           href="/sobre"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${
+          className={`leaf-indicator px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/sobre'
-              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
+              ? 'active text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
@@ -88,9 +88,9 @@ export const Header = () => {
         </Link>
         <Link
           href="/projetos"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${
+          className={`leaf-indicator px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/projetos'
-              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
+              ? 'active text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
@@ -98,9 +98,9 @@ export const Header = () => {
         </Link>
         <Link
           href="/blog"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${
+          className={`leaf-indicator px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/blog'
-              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
+              ? 'active text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
@@ -108,9 +108,9 @@ export const Header = () => {
         </Link>
         <Link
           href="/contato"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${
+          className={`leaf-indicator px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/contato'
-              ? 'bg-primary/10 dark:bg-primary/20 text-primary'
+              ? 'active text-primary'
               : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >

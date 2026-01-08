@@ -60,7 +60,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
   };
 
   return (
-    <footer className={`bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 ${className}`}>
+    <footer className={`bg-gray-50 dark:bg-gray-800 ${className}`}>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}

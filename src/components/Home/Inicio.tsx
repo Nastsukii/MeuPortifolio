@@ -21,7 +21,7 @@ export const Inicio = () => {
                   alt={photo.alt}
                   width={180}
                   height={180}
-                  className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-primary/20 dark:ring-primary/30 object-cover"
+                  className="wavy-border shadow-2xl ring-4 sm:ring-8 ring-primary/20 dark:ring-primary/30 object-cover"
                   priority
                 />
               </div>
@@ -31,19 +31,19 @@ export const Inicio = () => {
           {/* Content - Second on mobile */}
           <div className="flex-1 text-center lg:text-left lg:order-1">
             <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight">
-              <span className="block text-gray-600 dark:text-gray-300 text-xl sm:text-3xl font-medium mb-1 sm:mb-2">
+              <span className="particle-text block text-gray-600 dark:text-gray-300 text-xl sm:text-3xl font-medium mb-1 sm:mb-2">
                 {t('home.title')}
               </span>
-              <strong className="text-primary">
+              <strong className="particle-text-delay-1 block text-primary">
                 {t('home.titleBold')}
               </strong>
             </h1>
 
-            <p className="text-base sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 mb-4 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="particle-text-delay-2 text-base sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0" style={{ lineHeight: '2' }}>
               {t('home.subtitle')}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+            <div className="particle-text-delay-3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Link
                 href="/contato"
                 onClick={() => trackEvent('click', 'CTA', 'Lets Talk - Hero')}
@@ -60,7 +60,7 @@ export const Inicio = () => {
               </Link>
             </div>
 
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 dark:bg-primary/20 rounded-full">
+            <div className="particle-fade-delay-2 inline-flex items-center gap-3 px-6 py-3 bg-primary/10 dark:bg-primary/20 rounded-full">
               {badge.icon && <span className="text-3xl">{badge.icon}</span>}
               <div className="text-left">
                 <p className="text-sm font-semibold text-primary">
