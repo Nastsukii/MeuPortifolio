@@ -195,3 +195,109 @@ body {
 .neon-shadow {
   box-shadow: 0 0 12px rgb(57 255 20 / 0.35);
 }
+
+/* Wavy mirror border effect for hero image */
+@keyframes wave-morph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+  }
+  75% {
+    border-radius: 60% 40% 60% 40% / 70% 30% 50% 60%;
+  }
+}
+
+.wavy-border {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: wave-morph 8s ease-in-out infinite;
+}
+
+/* Leaf-shaped active indicator for navigation */
+.leaf-indicator {
+  position: relative;
+}
+
+.leaf-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 8px;
+  background: hsl(var(--primary));
+  clip-path: ellipse(50% 100% at 50% 0%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.leaf-indicator.active::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Particle text animation - appearing from top to bottom */
+@keyframes particle-fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+    filter: blur(10px);
+  }
+  50% {
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes particle-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.particle-text {
+  animation: particle-fall 1.2s ease-out forwards;
+}
+
+.particle-text-delay-1 {
+  animation: particle-fall 1.2s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.particle-text-delay-2 {
+  animation: particle-fall 1.2s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.particle-text-delay-3 {
+  animation: particle-fall 1.2s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.particle-fade {
+  animation: particle-fade-in 0.8s ease-out forwards;
+}
+
+.particle-fade-delay-1 {
+  animation: particle-fade-in 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.particle-fade-delay-2 {
+  animation: particle-fade-in 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}

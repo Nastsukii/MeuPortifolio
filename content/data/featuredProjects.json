@@ -19,28 +19,27 @@
     },
     {
       "id": 2,
-      "title": "NotaIA",
+      "title": "Decisorio",
       "titleKey": "projects.projectNumber",
       "descriptionKey": "home.projects.project2",
       "techs": [
-        "Next.js App Router",
-        "React 19",
+        "Next.js",
         "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Netlify"
+        "Tailwind CSS"
       ],
       "featured": true,
-      "link": "https://notaia.netlify.app",
-      "screenshotUrl": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnotaia.netlify.app?w=800"
+      "link": "https://decisorio.netlify.app",
+      "screenshotUrl": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fdecisorio.netlify.app?w=800"
     },
     {
       "id": 3,
+      "title": "Highticonversionfunnel",
       "titleKey": "projects.projectNumber",
       "descriptionKey": "home.projects.project3",
-      "techs": ["Next.js", "PostgreSQL", "API REST"],
+      "techs": ["Next.js", "TypeScript", "Tailwind CSS"],
       "featured": true,
-      "link": "/projetos"
+      "link": "https://highticonversionfunnel.netlify.app",
+      "screenshotUrl": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhighticonversionfunnel.netlify.app?w=800"
     }
   ]
 }

@@ -63,8 +63,8 @@
       "title": "Projetos em Destaque",
       "subtitle": "Alguns dos meus melhores trabalhos",
       "project1": "Homepage com Hero, Blog em Markdown, Tema claro/escuro e SEO básico.",
-      "project2": "Leitura e análise de documentos com IA, fluxo de geração de arquivos e interface simples.",
-      "project3": "Sistemas CRUD e APIs",
+      "project2": "Questionário de 6 perguntas para tomada de decisão com algoritmo de pontuação",
+      "project3": "Landing page otimizada para conversão com sistema de agendamento",
       "viewAll": "Ver Todos os Projetos"
     },
     "techStack": {

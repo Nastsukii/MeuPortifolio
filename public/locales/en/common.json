@@ -63,8 +63,8 @@
       "title": "Featured Projects",
       "subtitle": "Some of my best work",
       "project1": "Complete system with Next.js and TypeScript",
-      "project2": "Web application with React and Node.js",
-      "project3": "REST API with PostgreSQL",
+      "project2": "6-question decision making quiz with scoring algorithm",
+      "project3": "Landing page optimized for conversion with scheduling system",
       "viewAll": "View All Projects"
     },
     "techStack": {
