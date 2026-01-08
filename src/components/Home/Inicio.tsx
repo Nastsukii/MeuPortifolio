@@ -44,13 +44,7 @@ export const Inicio = () => {
             </p>
 
             <div className="particle-text-delay-3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Link
-                href="/contato"
-                onClick={() => trackEvent('click', 'CTA', 'Lets Talk - Hero')}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg"
-              >
-                {t('cta.letsTalk')} →
-              </Link>
+
               <Link
                 href="/projetos"
                 onClick={() => trackEvent('click', 'CTA', 'View Projects - Hero')}

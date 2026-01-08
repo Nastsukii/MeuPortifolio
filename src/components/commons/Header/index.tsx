@@ -103,16 +103,6 @@ export const Header = () => {
         >
           {t('navigation.blog')}
         </Link>
-        <Link
-          href="/contato"
-          className={`leaf-indicator px-4 py-2 rounded-md transition-colors duration-200 ${
-            router.pathname === '/contato'
-              ? 'active text-primary'
-              : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-          }`}
-        >
-          {t('navigation.contact')}
-        </Link>
       </nav>
 
       {/* Right side actions */}
