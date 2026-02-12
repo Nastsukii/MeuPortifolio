@@ -140,6 +140,25 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
         ".env.local"
       ],
       featured: false
+    },
+     {
+      id: 6,
+      title: "DevCafé",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      link: "https://cafeteria-dev-ten.vercel.app",
+      funcionalidades: [
+        "LandingPage",
+        "Animações",
+        "Interface Intuitiva",
+        "Simples"
+      ],
+      tecnologias: [
+        "Html",
+        "Css",
+        "AOS AOS Animate On Scroll Library",
+        "Vercel"
+      ],
+      featured: false
     }
   ];
 
