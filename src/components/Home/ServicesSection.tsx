@@ -2,6 +2,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import servicesData from '../../../content/data/services.json';
 
+/**
+ * Seção de Serviços
+ * Lista os serviços oferecidos com ícones e descrições.
+ */
 export const ServicesSection = () => {
   const { t } = useLanguage();
 
@@ -56,4 +60,3 @@ export const ServicesSection = () => {
     </section>
   );
 };
-

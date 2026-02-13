@@ -1,4 +1,9 @@
-// Função para rastrear eventos do Google Analytics
+/**
+ * Função para rastrear eventos personalizados do Google Analytics
+ * @param action - Nome da ação (ex: 'click', 'submit')
+ * @param category - Categoria do evento (ex: 'CTA', 'Form')
+ * @param label - Rótulo detalhado para o evento (ex: 'Botão Contato Home')
+ */
 export const trackEvent = (action: string, category: string, label: string) => {
   try {
     if (typeof window !== 'undefined' && (window as any).gtag) {

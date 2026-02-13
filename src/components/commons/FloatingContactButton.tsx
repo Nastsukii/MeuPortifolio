@@ -3,41 +3,45 @@ import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 
+/**
+ * Botão Flutuante de Contato
+ * Exibe um botão fixo no canto inferior direito que expande para mostrar opções de contato rápidas (WhatsApp, Email, LinkedIn, etc).
+ */
 export const FloatingContactButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useLanguage();
 
   return (
     <>
-      {/* Botão flutuante */}
+      {/* Botão flutuante principal (Toggle) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 right-6 z-50 bg-primary hover:bg-primary/90 text-primary-foreground p-4 rounded-full shadow-2xl neon-shadow transition-all duration-300 hover:scale-110 group"
         aria-label={isOpen ? t('floatingButton.closeMenu') : t('floatingButton.openMenu')}
       >
         {isOpen ? (
-          // Ícone X para fechar
+          // Ícone X para fechar quando aberto
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          // Ícone de mensagem
+          // Ícone de mensagem quando fechado
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
           </svg>
         )}
         
-        {/* Pulso animado */}
+        {/* Efeito de pulso (Ping) para chamar atenção quando fechado */}
         {!isOpen && (
           <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20"></span>
         )}
       </button>
 
-      {/* Menu de contato */}
+      {/* Menu de opções de contato (Exibido quando isOpen é true) */}
       {isOpen && (
         <div className="fixed bottom-20 right-6 z-50 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 p-4 animate-slide-up max-w-xs">
           <div className="flex flex-col gap-3">
-            {/* Botão para página de contato */}
+            {/* Atalho para a Página de Contato */}
             <Link
               href="/contato"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2.5 text-sm rounded-lg transition-colors text-center neon-shadow"
@@ -45,7 +49,7 @@ export const FloatingContactButton = () => {
               {t('floatingButton.contactMe')}
             </Link>
 
-            {/* Email com ícone e texto */}
+            {/* Link direto de Email */}
             <a
               href="mailto:comiranbueno0@gmail.com"
               className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors border border-gray-200 dark:border-gray-700"
@@ -57,7 +61,7 @@ export const FloatingContactButton = () => {
               <span className="text-xs font-medium text-gray-900 dark:text-white truncate">comiranbueno0@gmail.com</span>
             </a>
 
-            {/* Redes Sociais */}
+            {/* Ícones de Redes Sociais */}
             <div className="flex items-center gap-2 justify-center">
               {/* WhatsApp */}
               <a
@@ -102,7 +106,7 @@ export const FloatingContactButton = () => {
         </div>
       )}
 
-      {/* Animação CSS */}
+      {/* Estilos inline para animação de slide-up */}
       <style jsx>{`
         @keyframes slide-up {
           from {

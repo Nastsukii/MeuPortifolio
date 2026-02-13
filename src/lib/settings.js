@@ -1,4 +1,8 @@
-// Configurações estáticas para evitar problemas com fs no cliente
+/**
+ * Configurações estáticas do site
+ * Evita problemas com fs no cliente e centraliza dados de configuração.
+ */
+
 const businessSettingsPT = {
   "brandName": "Luiz Antonio Comiran Bueno",
   "brandDescription": "Desenvolvedor web apaixonado por criar soluções eficientes e práticas.",
@@ -113,7 +117,10 @@ const linkTreeData = {
   ]
 };
 
-// Configurações de negócio
+/**
+ * Retorna as configurações de negócio baseadas no idioma atual.
+ * @returns {Object} Configurações de negócio (nome, email, telefone, etc.)
+ */
 export const getBusinessSettings = () => {
   // Verifica se está no cliente
   if (typeof window !== 'undefined') {
@@ -125,37 +132,58 @@ export const getBusinessSettings = () => {
   return businessSettingsPT;
 };
 
-// Configurações gerais
+/**
+ * Retorna as configurações gerais do site.
+ * @returns {Object} Settings gerais (URL, footer, etc.)
+ */
 export const getGeneralSettings = () => {
   return generalSettings;
 };
 
-// Configurações de tema
+/**
+ * Retorna as configurações visuais do tema.
+ * @returns {Object} Cores, tamanhos e estilos.
+ */
 export const getThemeSettings = () => {
   return themeSettings;
 };
 
-// Logos
+/**
+ * Retorna os caminhos dos logos.
+ * @returns {Object} Paths para diferentes versões do logo.
+ */
 export const getLogos = () => {
   return logos;
 };
 
-// Menu principal
+/**
+ * Retorna a estrutura do menu principal.
+ * @returns {Object} Array de itens de menu.
+ */
 export const getMainMenu = () => {
   return mainMenu;
 };
 
-// LinkTree
+/**
+ * Retorna dados para árvore de links (social).
+ * @returns {Object} Array de links sociais.
+ */
 export const getLinkTreeData = () => {
   return linkTreeData;
 };
 
-// Configurações de integração (placeholder)
+/**
+ * Retorna configurações de integração (ex: APIs externas).
+ * @returns {Object} Configurações vazias (placeholder).
+ */
 export const getIntegrations = () => {
   return {};
 };
 
-// Informações de versão (placeholder)
+/**
+ * Retorna informações de versão do projeto.
+ * @returns {Object} Versão e mensagem.
+ */
 export const getVersionInfo = () => {
   return {
     version: "1.0.0",

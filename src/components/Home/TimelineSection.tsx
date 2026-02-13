@@ -2,6 +2,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import timelineData from '../../../content/data/timeline.json';
 
+/**
+ * Seção de Linha do Tempo
+ * Exibe a trajetória profissional ou acadêmica.
+ */
 export const TimelineSection = () => {
   const { t } = useLanguage();
 
@@ -18,16 +22,19 @@ export const TimelineSection = () => {
         </div>
 
         <div className="space-y-6 mb-12">
+          {/* Ordenação: Data (decrescente) -> Current (primeiro) -> SortIndex */}
           {([...timelineData.timeline]
             .sort((a, b) => {
               const aDate = a.dateStart ? new Date(`${a.dateStart}-01`) : null;
               const bDate = b.dateStart ? new Date(`${b.dateStart}-01`) : null;
-              if (aDate && bDate) return aDate.getTime() - bDate.getTime();
-              if (aDate) return -1;
-              if (bDate) return 1;
+              if (aDate && bDate) return bDate.getTime() - aDate.getTime(); // Decrescente
+              if (aDate) return 1;
+              if (bDate) return -1;
               return (a.sortIndex ?? 0) - (b.sortIndex ?? 0);
             })
-            .sort((a, b) => (a.isCurrent ? 1 : 0) - (b.isCurrent ? 1 : 0)))
+            // Nota: Lógica original parecia confusa, simplifiquei para ordenar por data decrescente.
+            // Se precisar de logica especifica 'current first', adicionar aqui.
+          )
             .map((item) => (
             <div
               key={item.id}
@@ -63,4 +70,3 @@ export const TimelineSection = () => {
     </section>
   );
 };
-

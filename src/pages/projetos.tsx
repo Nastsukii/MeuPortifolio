@@ -1,277 +1,259 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect, useRef } from 'react';
+import styled from 'styled-components';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
-import { useUser } from '@clerk/nextjs';
+import { projectsData } from '@/lib/projectsData';
+import { FaExternalLinkAlt, FaInfoCircle } from 'react-icons/fa';
+
+// ============================================================================
+// STYLED COMPONENTS
+// ============================================================================
+
+const ProjectsContainer = styled.div`
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  background-color: var(--background);
+  color: var(--foreground);
+`;
+
+const PageTitle = styled.h1`
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: inherit;
+  
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+`;
+
+const PageSubtitle = styled.p`
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #6b7280;
+  font-size: 1.125rem;
+  max-w: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  .dark & {
+    color: #9ca3af;
+  }
+`;
+
+const ProjectsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  max-w: 1400px;
+  margin: 0 auto;
+`;
+
+const ProjectCard = styled.div`
+  position: relative;
+  aspect-ratio: 16 / 10;
+  z-index: 1;
+
+  &:hover {
+    z-index: 50;
+  }
+`;
+
+const CardContent = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+
+  .dark & {
+    background: #1f2937;
+    border-color: rgba(255,255,255,0.05);
+  }
+
+  ${ProjectCard}:hover & {
+    height: auto;
+    min-height: 100%;
+    transform: scale(1.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: visible;
+  }
+`;
+
+const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  
+  ${ProjectCard}:hover & {
+     border-radius: 16px 16px 0 0;
+  }
+`;
+
+const ClickToViewOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+
+  ${ImageContainer}:hover & {
+    opacity: 1;
+  }
+`;
+
+const ClickText = styled.span`
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+`;
+
+const StyledImage = styled(Image)`
+  transition: transform 0.5s ease;
+  
+  ${ImageContainer}:hover & {
+    transform: scale(1.05);
+  }
+`;
+
+const DetailedOverlay = styled.div`
+  padding: 1.5rem;
+  background: white;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  .dark & {
+    background: #1f2937;
+  }
+
+  ${ProjectCard}:hover & {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+  }
+`;
+
+const ProjectTitle = styled.h3`
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+`;
+
+const TechList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+`;
+
+const TechBadge = styled.span`
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 9999px;
+  font-weight: 500;
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+`;
+
+const ActionButton = styled.a`
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &.primary {
+    background: var(--primary);
+    color: white;
+    &:hover { filter: brightness(1.1); }
+  }
+
+  &.secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    &:hover { background: rgba(0,0,0,0.05); }
+    
+    .dark & {
+      border-color: #374151;
+      &:hover { background: rgba(255,255,255,0.05); }
+    }
+  }
+`;
+
+const ProjectTitleBelow = styled.div`
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: white;
+  border-top: 1px solid #eee;
+
+  .dark & {
+    background: #1f2937;
+    border-top: 1px solid #374151;
+    color: white;
+  }
+`;
+
+// ============================================================================
+// TYPES & DATA
+// ============================================================================
 
 interface ProjetosProps {
   businessSettings: any;
   generalSettings: any;
 }
 
-interface Projeto {
-  id: number;
-  title: string;
-  videoUrl: string;
-  link: string;
-  funcionalidades: string[];
-  tecnologias: string[];
-  featured: boolean;
-}
+// ============================================================================
+// COMPONENT
+// ============================================================================
 
-const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
+const Projetos = ({ businessSettings }: ProjetosProps) => {
   const { t } = useLanguage();
-  const { isSignedIn, user, isLoaded } = useUser();
-  
-  const projetos: Projeto[] = [
-    {
-      id: 1,
-      title: "Vivieli Terapia",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "https://vivieliterapia.netlify.app",
-      funcionalidades: [
-        "Homepage com Hero e serviços",
-        "Blog em Markdown com categorias/tags",
-        "Tema claro/escuro",
-        "Responsividade (desktop/mobile)",
-        "SEO básico (meta, OG/Twitter)",
-        "Imagens otimizadas e code splitting",
-        "Deploy CI/CD (Vercel/Netlify)",
-        "LGPD e HTTPS"
-      ],
-      tecnologias: [
-        "Next.js 14",
-        "React 18",
-        "Tailwind CSS",
-        "CSS",
-        "ESLint",
-        "next-themes",
-        "react-icons",
-        "gray-matter",
-        "remark",
-        "date-fns",
-        "Markdown",
-        "JSON",
-        "Netlify",
-        "Vercel",
-        "Git",
-        "npm/yarn"
-      ],
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Decisorio",
-      videoUrl: "", // Sem vídeo por enquanto
-      link: "https://decisorio.netlify.app",
-      funcionalidades: [
-        "Questionário de 6 perguntas para tomada de decisão",
-        "Algoritmo de pontuação que gera resultado (Go / Caution / Stop)",
-        "Privacidade: sem banco de dados — respostas não são salvas no servidor",
-        "Resultado direto e imediato (exibição na tela)",
-        "Suporte bilingue (EN e PT-BR)",
-        "Armazenamento temporário no navegador via localStorage"
-      ],
-      tecnologias: [
-        "Next.js (App Router)",
-        "TypeScript",
-        "React",
-        "Tailwind CSS",
-        "Lucide React (ícones)",
-        "ESLint (qualidade de código)"
-      ],
-      featured: true
-    },
-    {
-      id: 3,
-      title: "highticonversionfunnel",
-      videoUrl: "", // Sem vídeo por enquanto
-      link: "https://highticonversionfunnel.netlify.app",
-      funcionalidades: [
-        "Landing page otimizada para conversão (funil)",
-        "Página de agendamento (/scheduling) e confirmação (/confirmation)",
-        "Multilíngue (PT-BR e EN) com troca instantânea",
-        "Design responsivo e Dark Mode",
-        "SEO configurado e otimizações de performance (Next.js)"
-      ],
-      tecnologias: ["Next.js (App Router)", "TypeScript", "React", "Tailwind CSS", "Lucide React (ícones)"],
-      featured: true
-    },
-    {
-      id: 4,
-      title: "To Do List",
-      videoUrl: "", // Sem vídeo por enquanto
-      link: "https://to-do-list-lacb-test-1.netlify.app",
-      funcionalidades: [
-        "Adicionar tarefas via campo de entrada e botão",
-        "Listar tarefas criadas dinamicamente",
-        "Marcar/alternar tarefa como concluída (toggle)",
-        "Deletar tarefas",
-        "Persistência das tarefas no navegador usando localStorage",
-        "Indicadores visuais (estilos e imagens) e animação de aparição de ícones ao passar o mouse"
-      ],
-      tecnologias: ["HTML (estrutura)", "CSS (estilos)", "JavaScript (Vanilla JS)", "Web Storage API (localStorage)"],
-      featured: false
-    },
-    {
-      id: 5,
-      title: "NotaIA",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "https://notaia.netlify.app",
-      funcionalidades: [
-        "Leitura e análise de documentos",
-        "Fluxo de geração de arquivos",
-        "Interface simples para upload",
-        "Deploy contínuo"
-      ],
-      tecnologias: [
-        "Next.js App Router",
-        "React 19",
-        "TypeScript",
-        "Tailwind CSS",
-        "PostCSS + Autoprefixer",
-        "ESLint",
-        "Framer Motion",
-        "Lucide React",
-        "clsx",
-        "Netlify",
-        ".env.local"
-      ],
-      featured: false
-    },
-     {
-      id: 6,
-      title: "DevCafé",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      link: "https://cafeteria-dev-ten.vercel.app",
-      funcionalidades: [
-        "LandingPage",
-        "Animações",
-        "Interface Intuitiva",
-        "Simples"
-      ],
-      tecnologias: [
-        "Html",
-        "Css",
-        "AOS AOS Animate On Scroll Library",
-        "Vercel"
-      ],
-      featured: false
-    }
-  ];
 
-  const [projetoSelecionado, setProjetoSelecionado] = useState<Projeto>(projetos[0]);
-  const [likes, setLikes] = useState<Record<number, boolean>>({});
-  const painelCentralRef = useRef<HTMLDivElement>(null);
-  const [mostrarNotificacao, setMostrarNotificacao] = useState(false);
-  
-  // Refs para controlar timers e prevenir spam
-  const timerNotificacaoRef = useRef<NodeJS.Timeout | null>(null);
-  const ultimoClickRef = useRef<number>(0);
-  const throttleDelayLogin = 2000; // 2 segundos para login
-
-  // Carregar curtidas do localStorage ao montar
-  useEffect(() => {
-    if (typeof window !== 'undefined' && isLoaded && isSignedIn) {
-      const savedLikes = localStorage.getItem('projectLikes');
-      if (savedLikes) {
-        try {
-          setLikes(JSON.parse(savedLikes));
-        } catch (e) {
-          console.error('Erro ao carregar curtidas:', e);
-        }
-      }
-    }
-  }, [isSignedIn, isLoaded]);
-
-  // Limpar curtidas quando deslogar
-  useEffect(() => {
-    if (isLoaded && !isSignedIn) {
-      setLikes({});
-    }
-  }, [isSignedIn, isLoaded]);
-
-  // Limpar timer ao desmontar componente
-  useEffect(() => {
-    return () => {
-      if (timerNotificacaoRef.current) {
-        clearTimeout(timerNotificacaoRef.current);
-      }
-    };
-  }, []);
-
-  // Função auxiliar para mostrar notificação de login
-  const mostrarNotificacaoLogin = (duracao: number) => {
-    // Cancela notificação anterior se existir
-    if (timerNotificacaoRef.current) {
-      clearTimeout(timerNotificacaoRef.current);
-    }
-    
-    // Esconde notificação anterior imediatamente
-    setMostrarNotificacao(false);
-    
-    // Pequeno delay para garantir que a animação reinicie
-    setTimeout(() => {
-      setMostrarNotificacao(true);
-      
-      // Agenda esconder notificação
-      timerNotificacaoRef.current = setTimeout(() => {
-        setMostrarNotificacao(false);
-        timerNotificacaoRef.current = null;
-      }, duracao);
-    }, 50);
-  };
-
-  // Função para curtir/descurtir (otimizada contra spam)
-  const toggleLike = (projectId: number, e: React.MouseEvent) => {
-    e.stopPropagation();
-    
-    const agora = Date.now();
-    
-    // === CASO 1: Usuário NÃO autenticado ===
-    if (!isSignedIn) {
-      // Throttle: Só mostra notificação se passou tempo suficiente
-      if (agora - ultimoClickRef.current < throttleDelayLogin) {
-        // Muito rápido, ignora o click completamente
-        return;
-      }
-      
-      ultimoClickRef.current = agora;
-      mostrarNotificacaoLogin(4000);
-      return;
-    }
-    
-    // === CASO 2: Usuário AUTENTICADO ===
-    // Salva a curtida sem mostrar notificação
-    const newLikes = { ...likes };
-    newLikes[projectId] = !newLikes[projectId];
-    setLikes(newLikes);
-    localStorage.setItem('projectLikes', JSON.stringify(newLikes));
-  };
-
-  // Verificar se projeto está curtido
-  const isLiked = (projectId: number) => {
-    return likes[projectId] || false;
-  };
-
-  // Função para selecionar projeto e rolar até o painel
-  const selecionarProjeto = (projeto: Projeto) => {
-    setProjetoSelecionado(projeto);
-    
-    // Rolar suavemente até o painel central com offset
-    setTimeout(() => {
-      if (painelCentralRef.current) {
-        const elementPosition = painelCentralRef.current.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - 70; // 70px de margem superior
-        
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }, 100);
+  const getScreenshotUrl = (url: string) => {
+    return `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=800`;
   };
 
   return (
@@ -280,258 +262,77 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
         <title>{`${t('projects.title')} | ${businessSettings.brandName}`}</title>
         <meta
           name="description"
-          content={`Confira os projetos desenvolvidos por ${businessSettings.brandName} - Desenvolvedor web especializado em soluções modernas`}
+          content={`Confira os projetos desenvolvidos por ${businessSettings.brandName}`}
         />
-        <meta property="og:title" content={`${t('projects.title')} | ${businessSettings.brandName}`} />
-        <meta property="og:description" content={`Confira os projetos desenvolvidos por ${businessSettings.brandName} - Desenvolvedor web especializado em soluções modernas`} />
       </Head>
 
-      {/* Notificação de Login */}
-      {mostrarNotificacao && (
-        <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
-          <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-6 py-4 rounded-lg shadow-2xl neon-shadow flex items-center gap-3 min-w-[320px]">
-            <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-            <div>
-              <p className="font-semibold text-base">{t('projects.like.loginRequired')}</p>
-              <p className="text-sm text-primary/80">{t('projects.like.loginMessage')}</p>
-            </div>
-            <button 
-              onClick={() => setMostrarNotificacao(false)}
-              className="ml-2 hover:bg-white/20 rounded p-1 transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
+      <ProjectsContainer>
+        <PageTitle>{t('projects.title')}</PageTitle>
+        <PageSubtitle>{t('projects.subtitle')}</PageSubtitle>
 
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-        {/* Cabeçalho */}
-        <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 py-12">
-          <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('projects.title')}
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              {t('projects.subtitle')}
-            </p>
-          </div>
-        </div>
-
-        {/* Layout Principal */}
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="flex flex-col lg:flex-row gap-6">
-            
-            {/* Sidebar Esquerda - Lista de Projetos */}
-            <aside className="lg:w-80 shrink-0">
-              <div className="space-y-3 sticky top-24">
-                {projetos.map((projeto) => (
-                  <div
-                    key={projeto.id}
-                    onClick={() => selecionarProjeto(projeto)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        selecionarProjeto(projeto);
-                      }
-                    }}
-                    role="button"
-                    tabIndex={0}
-                    aria-label={`Selecionar ${t('projects.projectNumber')} ${projeto.id}`}
-                    className={`w-full text-left px-5 py-4 rounded-lg transition-all duration-200 shadow-lg relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary ${
-                      projetoSelecionado.id === projeto.id
-                        ? 'bg-primary text-black border-2 border-primary shadow-primary/30'
-                        : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 shadow-gray-300/50 dark:shadow-gray-900/50'
-                    }`}
-                  >
-                      {/* Badge de Destaque no canto superior esquerdo */}
-                      {projeto.featured && (
-                        <span className="absolute top-1.5 left-1.5 text-[10px]">
-                          ⭐
-                        </span>
-                      )}
-
-                      {/* Botão de Curtir no canto superior direito */}
-                      <button
-                        onClick={(e) => toggleLike(projeto.id, e)}
-                        className={`absolute top-2 right-2 p-1.5 rounded-full transition-all duration-200 ${
-                          isLiked(projeto.id)
-                            ? 'bg-red-500 hover:bg-red-600'
-                            : projetoSelecionado.id === projeto.id
-                            ? 'bg-white/20 hover:bg-white/30'
-                            : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'
-                        }`}
-                        title={isSignedIn ? (isLiked(projeto.id) ? 'Descurtir' : 'Curtir') : 'Faça login para curtir'}
-                      >
-                        <svg 
-                          className={`w-4 h-4 ${
-                            isLiked(projeto.id) 
-                              ? 'text-white dark:text-primary-foreground' 
-                              : projetoSelecionado.id === projeto.id
-                              ? 'text-white dark:text-primary-foreground'
-                              : 'text-gray-600 dark:text-gray-300'
-                          }`}
-                          fill={isLiked(projeto.id) ? 'currentColor' : 'none'} 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round" 
-                            strokeWidth={2} 
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" 
-                          />
-                        </svg>
-                      </button>
-
-                      <div className="mb-2 pr-8">
-                        <div className="mb-1">
-                          <span
-                            className={`font-semibold text-base ${
-                              projetoSelecionado.id === projeto.id
-                                ? 'text-black dark:text-black'
-                                : ''
-                            }`}
-                          >
-                            {projeto.title}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {projeto.tecnologias.map((tech, index) => (
-                          <span
-                            key={index}
-                            className={`text-xs px-2 py-0.5 rounded ${
-                              projetoSelecionado.id === projeto.id
-                                ? 'bg-white/20 text-black dark:text-black'
-                                : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'
-                            }`}
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                  </div>
-                ))}
-              </div>
-            </aside>
-
-            {/* Painel Central - Detalhes do Projeto */}
-            <main className="flex-1" ref={painelCentralRef}>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 md:p-8">
-                
-                {/* Título do Projeto */}
-                <div className="mb-6">
-                  <div className="flex items-center gap-3">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                      {projetoSelecionado.title}
-                    </h2>
-                    {projetoSelecionado.featured && (
-                      <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full neon-shadow">
-                        {t('projects.featuredBadge')}
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                {/* Layout: Funcionalidades (esquerda) + Vídeo (direita) */}
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
-                  
-                  {/* Funcionalidades - Esquerda */}
-                  <div className="lg:col-span-2">
-                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                      <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {t('projects.features')}
-                    </h3>
-                    <ul className="space-y-3">
-                      {projetoSelecionado.funcionalidades.map((func, index) => (
-                        <li key={index} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
-                          <span className="text-primary text-xl mt-0.5">•</span>
-                          <span className="text-base">{func}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Vídeo + Link - Direita */}
-                  <div className="lg:col-span-3">
-                    {/* Vídeo */}
-                    <div className="aspect-video bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md mb-3">
-                      <iframe
-                        src={projetoSelecionado.videoUrl}
-                        title={`${t('projects.projectNumber')} ${projetoSelecionado.id}`}
-                        className="w-full h-full"
-                        allowFullScreen
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        <ProjectsGrid>
+          {projectsData.map((projeto) => (
+            <div key={projeto.id}>
+              <ProjectCard>
+                <CardContent>
+                  <a href={projeto.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block', position: 'relative' }}>
+                    <ImageContainer>
+                      <ClickToViewOverlay>
+                        <ClickText>Clique para ver</ClickText>
+                      </ClickToViewOverlay>
+                      <StyledImage
+                        src={getScreenshotUrl(projeto.link)}
+                        alt={`Screenshot do projeto ${projeto.title}`}
+                        fill
+                        style={{ objectFit: 'cover', objectPosition: 'top' }}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="bg-gray-100 dark:bg-gray-800"
                       />
-                    </div>
+                    </ImageContainer>
+                  </a>
+                  
+                  <DetailedOverlay>
+                    <ProjectTitle>{projeto.title}</ProjectTitle>
                     
-                    {/* Link do Projeto abaixo do vídeo */}
-                    <div className="text-center">
-                      <a
-                        href={projetoSelecionado.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-gray-800 dark:text-white underline hover:text-primary font-semibold text-lg"
-                      >
-                        {t('projects.accessProject')}
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
+                    <TechList>
+                      {projeto.tecnologias.map((tech, i) => (
+                        <TechBadge key={i}>{tech}</TechBadge>
+                      ))}
+                    </TechList>
+                    
+                     <div className="text-sm text-gray-600 dark:text-gray-300">
+                      {projeto.funcionalidades.map((func, i) => (
+                        <p key={i} className="mb-1">• {func}</p>
+                      ))}
                     </div>
-                  </div>
-                </div>
 
-                {/* Tecnologias - Embaixo de tudo (full width) */}
-                <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                    <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                    {t('projects.technologies')}
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {projetoSelecionado.tecnologias.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-gray-800 dark:text-gray-100 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                    <ButtonGroup>
+                      <Link href={`/projeto/${projeto.slug}`} passHref legacyBehavior>
+                         <ActionButton className="primary">
+                          <FaInfoCircle /> Mais Informações
+                        </ActionButton>
+                      </Link>
+                      
+                      <ActionButton 
+                        href={projeto.link}
+                        target="_blank"
+                        rel="noopener noreferrer" 
+                        className="secondary"
                       >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </main>
-          </div>
-        </div>
-
-
-        {/* CTA Section */}
-        <div className="max-w-5xl mx-auto px-6 py-12">
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl shadow-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {t('projects.interested.title')}
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              {t('projects.interested.description')}
-            </p>
-            <Link
-              href="/contato"
-              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 neon-shadow"
-            >
-              {t('projects.interested.getInTouch')}
-            </Link>
-          </div>
-        </div>
-      </div>
+                         <FaExternalLinkAlt /> Visitar
+                      </ActionButton>
+                    </ButtonGroup>
+                  </DetailedOverlay>
+                </CardContent>
+              </ProjectCard>
+              
+              <ProjectTitleBelow>
+                {projeto.title}
+              </ProjectTitleBelow>
+            </div>
+          ))}
+        </ProjectsGrid>
+      </ProjectsContainer>
     </>
   );
 };

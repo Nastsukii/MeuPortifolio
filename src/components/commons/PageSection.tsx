@@ -20,6 +20,11 @@ interface PageSectionProps {
   className?: string;
 }
 
+/**
+ * Componente Genérico de Seção
+ * Wrapper flexível para seções da página, suportando imagens de fundo, containers (boxed), 
+ * grids responsivos, títulos e botões de ação (CTA).
+ */
 export const PageSection = ({
   isBoxed = false,
   bgImage,

@@ -1,3 +1,8 @@
+import { GetStaticProps } from 'next';
+import Head from 'next/head';
+import { useUser } from "@clerk/nextjs";
+
+// Componentes da Página Inicial
 import { Inicio } from '@/components/Home/Inicio';
 import { AboutSection } from '@/components/Home/AboutSection';
 import { ServicesSection } from '@/components/Home/ServicesSection';
@@ -5,20 +10,24 @@ import { FeaturedProjects } from '@/components/Home/FeaturedProjects';
 import { TechStack } from '@/components/Home/TechStack';
 import { TimelineSection } from '@/components/Home/TimelineSection';
 import { CTASection } from '@/components/Home/CTASection';
-import { Project, AboutMe as TAboutMe } from '@/types/Home';
-import { GetStaticProps } from 'next';
-import Head from 'next/head';
-import { getSortedPostsData, PostData } from '@/lib/posts';
-import { useUser } from "@clerk/nextjs";
+
+// Tipos e Utilitários
+import { AboutMe as TAboutMe } from '@/types/Home';
+import { getSortedPostsData } from '@/lib/posts';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
 
+// Dados Estáticos
 import homeData from '../../public/home.json';
 
+/**
+ * Interface para as propriedades recebidas pelo componente Home via getStaticProps
+ */
 interface HomeProps {
   home: {
     aboutMe: TAboutMe;
   };
+  // Dados dos posts do blog para possível exibição
   allPostsData: Array<{
     slug: string;
     title: string;
@@ -26,19 +35,29 @@ interface HomeProps {
     author: string;
     public: boolean;
   }>;
+  // Configurações gerais do site
   businessSettings: any;
   generalSettings: any;
 }
 
+/**
+ * Componente da Página Inicial (Home)
+ * Apresenta a visão geral do portfólio, incluindo seções de sobre, projetos, serviços, etc.
+ */
 const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomeProps) => {
+  // Extrai dados de "Sobre Mim" com fallback para objeto vazio
   const { aboutMe } = home || { aboutMe: {} as TAboutMe };
+  
+  // Hook de tradução (não utilizado explicitamente no JSX aqui, mas disponível)
   const { t } = useLanguage();
-  const { isSignedIn } = useUser(); // Usar o hook useUser
+  
+  // Hook de autenticação do Clerk
+  const { isSignedIn } = useUser(); 
 
   return (
     <>
       <Head>
-        {/* SEO básico */}
+        {/* Configurações de SEO e Metatags Específicas da Home */}
         <title>Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack | Next.js, React, Node.js</title>
         <meta
           name="description"
@@ -48,7 +67,7 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
         <link rel="canonical" href={generalSettings.siteUrl} />
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph */}
+        {/* Metatags Open Graph (Facebook/LinkedIn) */}
         <meta property="og:title" content="Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack" />
         <meta property="og:description" content="Desenvolvimento de aplicações web modernas com Next.js, React e Node.js. Veja meu portfolio de projetos." />
         <meta property="og:url" content={generalSettings.siteUrl} />
@@ -57,12 +76,12 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
-        {/* Twitter */}
+        {/* Metatags Twitter */}
         <meta name="twitter:title" content="Luiz Antonio Comiran Bueno — Desenvolvedor Full Stack" />
         <meta name="twitter:description" content="Desenvolvimento de aplicações web modernas com Next.js, React e Node.js. Veja meu portfolio de projetos." />
         <meta name="twitter:image" content={`${generalSettings.siteUrl}/img/twitter-image.jpg`} />
 
-        {/* JSON-LD */}
+        {/* JSON-LD para SEO (Schema.org) - Dados estruturados sobre a Pessoa e o WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -99,39 +118,45 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
           }}
         />
       </Head>
+      
       <div className="w-full">
-        {/* Hero Section */}
+        {/* Seção Principal (Hero) - Apresentação inicial */}
         <Inicio />
 
-        {/* Services Section */}
+        {/* Seção de Serviços oferecidos */}
         <ServicesSection />
 
-        {/* About Section */}
+        {/* Seção Sobre Mim */}
         <AboutSection />
 
-        {/* Featured Projects */}
+        {/* Projetos em Destaque */}
         <FeaturedProjects />
 
-        {/* Tech Stack */}
+        {/* Tecnologias e Habilidades */}
         <TechStack />
 
-        {/* Timeline Section */}
+        {/* Linha do Tempo / Experiência */}
         <TimelineSection />
 
-        {/* CTA Final */}
+        {/* Chamada para Ação (Contato) no final da página */}
         <CTASection />
       </div>
     </>
   );
 };
 
-const loadHome = async () => {
-  return homeData;
-};
-
+/**
+ * getStaticProps: Função do Next.js para carregar dados estáticos no momento do build.
+ * Garante performance máxima servindo HTML estático.
+ */
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const home = await loadHome();
-  const allPostsData = getSortedPostsData(); // Buscar dados dos posts
+  // Carrega dados diretamente do JSON importado
+  const home = homeData;
+  
+  // Busca dados dos posts do blog
+  const allPostsData = getSortedPostsData();
+  
+  // Busca configurações globais do sistema
   const businessSettings = getBusinessSettings();
   const generalSettings = getGeneralSettings();
 

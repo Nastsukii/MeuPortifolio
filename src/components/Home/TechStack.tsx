@@ -1,6 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import technologiesData from '../../../content/data/technologies.json';
 
+/**
+ * Seção de Stack Tecnológico
+ * Exibe as tecnologias que domino (React, Node, etc.).
+ */
 export const TechStack = () => {
   const { t } = useLanguage();
 
@@ -34,4 +38,3 @@ export const TechStack = () => {
     </section>
   );
 };
-

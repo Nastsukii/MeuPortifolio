@@ -1,6 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import whyMeData from '../../../content/data/whyMe.json';
 
+/**
+ * Seção "Por que me escolher?"
+ * Destaca diferenciais competitivos.
+ */
 export const WhyMeSection = () => {
   const { t } = useLanguage();
 
@@ -35,4 +39,3 @@ export const WhyMeSection = () => {
     </section>
   );
 };
-

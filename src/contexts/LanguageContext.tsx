@@ -1,5 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+// Importar as traduções
+import ptTranslations from '../../public/locales/pt/common.json';
+import enTranslations from '../../public/locales/en/common.json';
+
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
@@ -8,15 +12,16 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Importar as traduções
-import ptTranslations from '../../public/locales/pt/common.json';
-import enTranslations from '../../public/locales/en/common.json';
-
 const translations = {
   pt: ptTranslations,
   en: enTranslations,
 };
 
+/**
+ * Provedor de Contexto de Idioma
+ * Gerencia o estado global do idioma (pt ou en) e fornece função de tradução 't'.
+ * Persiste a preferência do usuário no localStorage.
+ */
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState('en');
 
@@ -37,6 +42,11 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   };
 
+  /**
+   * Função de tradução
+   * @param key Chave de tradução (ex: 'home.title' ou 'button.label')
+   * @returns O valor traduzido ou a própria chave se não encontrado.
+   */
   const t = (key: string): any => {
     const keys = key.split('.');
     let value: any = translations[language as keyof typeof translations];
@@ -59,6 +69,10 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   );
 };
 
+/**
+ * Hook para acessar o contexto de idioma.
+ * @returns {LanguageContextType} O contexto de idioma contendo idioma atual, setter e função de tradução.
+ */
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (context === undefined) {

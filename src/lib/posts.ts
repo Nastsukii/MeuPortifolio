@@ -10,9 +10,14 @@ export interface PostData {
   date: string;
   author: string;
   public: boolean;
-  content: string; // Alterar de contentHtml para content
+  content: string; // Conteúdo Markdown puro
 }
 
+/**
+ * Obtém os dados de todos os posts ordenados por data.
+ * Lê o diretório 'posts', extrai metadados com gray-matter e ordena.
+ * @returns Array de posts ordenados.
+ */
 export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
@@ -47,6 +52,11 @@ export function getSortedPostsData() {
   });
 }
 
+/**
+ * Obtém os dados de um post específico pelo slug.
+ * @param slug Identificador do post (nome do arquivo sem extensão).
+ * @returns Objeto com dados do post e conteúdo markdown.
+ */
 export async function getPostData(slug: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -58,7 +68,6 @@ export async function getPostData(slug: string): Promise<PostData> {
   const dateString = data.date instanceof Date ? data.date.toISOString() : data.date;
 
   // Não converter mais para HTML aqui, retornar o conteúdo Markdown bruto
-
   // Combine the data with the id and contentHtml
   return {
     slug,
@@ -68,6 +77,11 @@ export async function getPostData(slug: string): Promise<PostData> {
   };
 }
 
+/**
+ * Obtém todos os slugs de posts disponíveis.
+ * Usado pelo getStaticPaths do Next.js.
+ * @returns Array de paths com params.slug.
+ */
 export function getAllPostSlugs() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {

@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * Global Styles
+ * Define variáveis de tema (light/dark), tipografia base e utilitários personalizados.
+ * Integração com Tailwind CSS e next-themes.
+ */
+
 /* Configuração de tema */
 :root {
   --background: 0 0% 100%;

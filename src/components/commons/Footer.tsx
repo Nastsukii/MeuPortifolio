@@ -8,20 +8,26 @@ interface FooterProps {
   className?: string;
 }
 
+/**
+ * Componente de Rodapé (Footer)
+ * Exibe informações da marca, links rápidos de navegação, contatos e redes sociais.
+ * Renderizado em todas as páginas via Layout.
+ */
 export const Footer = ({ className = "" }: FooterProps) => {
   const { t, language } = useLanguage();
   const [mounted, setMounted] = useState(false);
   const generalSettings = getGeneralSettings();
-  const linkTreeData = getLinkTreeData();
+  const linkTreeData = getLinkTreeData() as { linkTree: { icon: string; href: string; label: string }[] };
   
+  // Efeito para garantir renderização apenas no cliente (evita hidratação incorreta por data/tema)
   useEffect(() => {
     setMounted(true);
   }, []);
   
-  // Usa a tradução diretamente do contexto ao invés de getBusinessSettings
+  // Configurações da marca (Hardcoded por enquanto, idealmente viriam de um CMS/Contexto Global)
   const businessSettings = {
     brandName: "Lacb",
-    brandDescription: t('home.subtitle'),
+    brandDescription: t('home.subtitle'), // Usa subtítulo da home como descrição
     brandEmail: "comiranbueno0@gmail.com",
     brandPhone: "+55 45 99938-3320"
   };
@@ -37,8 +43,11 @@ export const Footer = ({ className = "" }: FooterProps) => {
     );
   }
 
+  /**
+   * Helper para renderizar ícones de redes sociais
+   */
   const getIcon = (iconName: string) => {
-    const icons: { [key: string]: any } = {
+    const icons: { [key: string]: () => JSX.Element } = {
       FaLinkedin: () => (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -63,7 +72,8 @@ export const Footer = ({ className = "" }: FooterProps) => {
     <footer className={`bg-gray-50 dark:bg-gray-800 ${className}`}>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
+          
+          {/* Seção 1: Marca e Redes Sociais */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <Image
@@ -81,7 +91,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
               {businessSettings.brandDescription}
             </p>
             
-            {/* Social Links */}
+            {/* Ícones de Redes Sociais */}
             <div className="flex gap-4">
               {linkTreeData.linkTree?.filter((link: any) => link.icon !== 'FaEnvelope').map((link: any, index: number) => {
                 const IconComponent = getIcon(link.icon);
@@ -101,7 +111,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Seção 2: Links Rápidos */}
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
@@ -133,7 +143,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Seção 3: Informações de Contato */}
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.contact')}</h3>
             <div className="space-y-2">
@@ -159,7 +169,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
           </div>
         </div>
 
-        {/* Bottom Section */}
+        {/* Rodapé inferior: Copyright */}
         <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm text-center">

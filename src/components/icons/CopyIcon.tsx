@@ -4,6 +4,9 @@ interface CopyIconProps extends SVGProps<SVGSVGElement> {
   title?: string;
 }
 
+/**
+ * Ícone de Cópia
+ */
 export const CopyIcon = ({ title, ...props }: CopyIconProps) => {
   return (
     <svg

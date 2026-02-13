@@ -1,5 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 
+/**
+ * Seletor de Idioma
+ * Permite alternar entre Português (PT) e Inglês (EN).
+ * Persiste a escolha do usuário através do contexto.
+ */
 export const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
 
@@ -12,6 +17,7 @@ export const LanguageSwitcher = () => {
             ? 'bg-primary text-primary-foreground'
             : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
         }`}
+        aria-label="Mudar para Português"
       >
         PT
       </button>
@@ -22,6 +28,7 @@ export const LanguageSwitcher = () => {
             ? 'bg-primary text-primary-foreground'
             : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
         }`}
+        aria-label="Switch to English"
       >
         EN
       </button>

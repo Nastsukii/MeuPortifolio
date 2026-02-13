@@ -1,5 +1,8 @@
 import React, { SVGProps } from 'react';
 
+/**
+ * Ícone de Fechar Menu (X)
+ */
 export const MenuCloseIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg

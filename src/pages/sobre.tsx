@@ -6,11 +6,18 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
 import { PageSection } from '@/components/commons/PageSection';
 
+/**
+ * Interface das propriedades da página Sobre
+ */
 interface SobreProps {
   businessSettings: any;
   generalSettings: any;
 }
 
+/**
+ * Componente da Página Sobre Mim
+ * Apresenta informações detalhadas sobre a carreira, formação, serviços e habilidades do desenvolvedor.
+ */
 const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
   const { t } = useLanguage();
   
@@ -34,8 +41,9 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
         >
           <div className="col-span-full">
             <div className="prose prose-lg max-w-none mx-auto">
-              {/* Education and Specialization blocks */}
+              {/* === Blocos de Destaque: Educação e Especialização === */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                {/* Bloco de Educação */}
                 <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                     {t('about.education.title')}
@@ -44,6 +52,7 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                     {t('about.education.degree')}
                   </p>
                 </div>
+                {/* Bloco de Especialização */}
                 <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                     {t('about.specialization.title')}
@@ -54,7 +63,10 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                 </div>
               </div>
 
+              {/* === Conteúdo Principal: Foto e Introdução === */}
               <div className="flex flex-col lg:flex-row gap-12 items-start">
+                
+                {/* Fotos de Perfil */}
                 <div className="flex-shrink-0 flex flex-row sm:flex-col gap-4 sm:gap-8 justify-center lg:justify-start">
                   <Image
                     src="/img/perfil2.jpeg"
@@ -71,15 +83,21 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                     className="w-24 h-24 sm:w-48 sm:h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl"
                   />
                 </div>
+
+                {/* Texto e Seções Detalhadas */}
                 <div className="flex-1">
+                  {/* Introdução Textual */}
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                     {t('about.introduction')}
                   </p>
+                  
+                  {/* === Formação Acadêmica Detalhada === */}
                   <div className="mb-8">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                       Formação Acadêmica
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Técnico */}
                       <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
                         <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                           Formação Técnica
@@ -91,6 +109,8 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                           <li><strong>Situação:</strong> Concluído</li>
                         </ul>
                       </div>
+                      
+                      {/* Graduação */}
                       <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
                         <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                           Graduação em Andamento
@@ -107,6 +127,7 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                     </div>
                   </div>
                   
+                  {/* === Serviços Oferecidos === */}
                   <div className="mb-8">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                       {t('about.services.title')}
@@ -118,6 +139,7 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                     </ul>
                   </div>
 
+                  {/* === Por que me escolher === */}
                   <div className="mb-8">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                       {t('about.whyChoose.title')}
@@ -129,6 +151,7 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                     </ul>
                   </div>
 
+                  {/* === Habilidades (Stack) === */}
                   <div className="mb-8">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                       {t('about.skills.title')}
@@ -154,8 +177,6 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
             </div>
           </div>
         </PageSection>
-
-
       </div>
     </>
   );

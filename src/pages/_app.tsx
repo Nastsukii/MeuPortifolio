@@ -1,31 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { ClerkProvider } from '@clerk/nextjs';
+
+// Componentes e Contextos Globais
 import { Layout } from '@/components/commons/Layout';
 import { ThemeProvider } from '@/components/commons/ThemeProvider';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { GoogleAnalytics } from '@/components/commons/GoogleAnalytics';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+
+// Utilitários e Estilos
 import * as gtag from '@/lib/gtag';
 import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import { ClerkProvider } from '@clerk/nextjs';
 
+/**
+ * Componente Principal da Aplicação (App)
+ * Responsável por envolver todas as páginas com os provedores de contexto (Tema, Idioma, Autenticação)
+ * e gerenciar eventos globais como mudanças de rota para Analytics.
+ */
 function App({ Component, pageProps }: AppProps) {
+  // Chave pública do Clerk para autenticação, vinda das variáveis de ambiente
   const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   const router = useRouter();
 
+  // Efeito para rastrear visualizações de página no Google Analytics quando a rota muda
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       gtag.pageview(url);
     };
+    
+    // Inscreve no evento de mudança de rota
     router.events.on('routeChangeComplete', handleRouteChange);
+    
+    // Remove a inscrição ao desmontar o componente
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
 
-  // Se não há chave do Clerk, renderiza sem autenticação
+  // Se a chave do Clerk não estiver configurada, renderiza a aplicação sem o provedor de autenticação
+  // Isso evita erros em desenvolvimento se as variáveis de ambiente não estiverem setadas
   if (!PUBLISHABLE_KEY) {
     return (
       <LanguageProvider>
@@ -41,21 +56,25 @@ function App({ Component, pageProps }: AppProps) {
     );
   }
 
+  // Renderização padrão com todos os provedores, incluindo Clerk (Auth)
   return (
     <LanguageProvider>
       <ThemeProvider>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
+        
+        {/* Componente para carregar scripts do Google Analytics */}
         <GoogleAnalytics />
-        {/* @ts-expect-error */}
+        
+        {/* @ts-expect-error - Ignora erro de tipagem conhecido no ClerkProvider */}
         <ClerkProvider 
           publishableKey={PUBLISHABLE_KEY} 
           initialState={pageProps.initialState}
           appearance={{
             baseTheme: undefined,
             variables: {
-              colorPrimary: '#3b82f6',
+              colorPrimary: '#3b82f6', // Azul padrão
               colorBackground: '#ffffff',
               colorInputBackground: '#ffffff',
               colorInputText: '#000000',
@@ -71,6 +90,7 @@ function App({ Component, pageProps }: AppProps) {
             }
           }}
         >
+          {/* Layout padrão aplicado a todas as páginas */}
           <Layout>
             <Component {...pageProps} />
           </Layout>

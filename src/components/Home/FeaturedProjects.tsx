@@ -4,20 +4,25 @@ import Image from 'next/image';
 import { trackEvent } from '@/lib/analytics';
 import featuredProjectsData from '../../../content/data/featuredProjects.json';
 
+type FeaturedProject = {
+  id: number;
+  title?: string;
+  titleKey?: string;
+  descriptionKey: string;
+  techs: string[];
+  featured: boolean;
+  link: string;
+  screenshotUrl?: string;
+};
+
+/**
+ * Seção de Projetos em Destaque
+ * Exibe grid com cartões de projetos selecionados.
+ */
 export const FeaturedProjects = () => {
   const { t } = useLanguage();
 
-  type FeaturedProject = {
-    id: number;
-    title?: string;
-    titleKey?: string;
-    descriptionKey: string;
-    techs: string[];
-    featured: boolean;
-    link: string;
-    screenshotUrl?: string;
-  };
-
+  // Casting para garantir tipagem correta dos dados importados do JSON
   const projects = featuredProjectsData.projects as FeaturedProject[];
 
   return (
@@ -63,7 +68,7 @@ export const FeaturedProjects = () => {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
                   {(project.title ?? t(project.titleKey || 'projects.projectNumber'))} {project.id}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                   {t(project.descriptionKey)}
                 </p>
                 <div className="flex flex-wrap gap-2">

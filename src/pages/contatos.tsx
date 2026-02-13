@@ -2,6 +2,12 @@ import { CopyButton } from '@/components/commons/CopyButton';
 import Head from 'next/head';
 import React, { useState } from 'react';
 
+// =====================================================================
+// AVISO: Esta página parece ser uma versão antiga ou alternativa de "Contato".
+// A página principal de contato é a 'src/pages/contato.tsx'.
+// Esta página usa estilos diferentes (classes 'bg-h-blue-900') e fetch manual.
+// =====================================================================
+
 interface ContatosProps {
   contacts: {
     name: string;
@@ -11,8 +17,7 @@ interface ContatosProps {
 }
 
 const Contatos = ({ contacts }: ContatosProps) => {
-  console.log(contacts);
-
+  // Estado para o formulário de contato simplificado
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,6 +28,10 @@ const Contatos = ({ contacts }: ContatosProps) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  /**
+   * Envia o formulário para uma função serverless (Netlify Functions)
+   * Nota: O endpoint parece depender de variável de ambiente ou caminho hardcoded
+   */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -38,14 +47,14 @@ const Contatos = ({ contacts }: ContatosProps) => {
       const data = await response.json();
 
       if (response.ok) {
-        alert(data.message); // Or display a success message more gracefully
+        alert(data.message);
         setFormData({
           name: '',
           email: '',
           message: '',
         });
       } else {
-        alert(data.message); // Or display an error message more gracefully
+        alert(data.message);
       }
     } catch (error) {
       console.error('Error submitting form:', error);

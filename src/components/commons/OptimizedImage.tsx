@@ -6,6 +6,10 @@ interface OptimizedImageProps extends Omit<ImageProps, 'onError' | 'onLoad'> {
   fallback?: string;
 }
 
+/**
+ * Componente de Imagem Otimizada
+ * Wrapper em torno do Next/Image com suporte a fallback de erro e estado de carregamento (skeleton).
+ */
 export const OptimizedImage = ({
   src,
   alt,
@@ -20,6 +24,7 @@ export const OptimizedImage = ({
   const [loading, setLoading] = useState(true);
   const [imgSrc, setImgSrc] = useState(fallback);
 
+  // Verifica se a imagem carrega corretamente
   useEffect(() => {
     const img = new window.Image();
     img.src = src as string;

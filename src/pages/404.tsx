@@ -3,11 +3,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Roboto } from 'next/font/google';
 
+// Configuração da fonte Roboto otimizada pelo Next.js
 const roboto = Roboto({
   subsets: ['latin'],
   weight: '500',
 });
 
+/**
+ * Página de Erro 404 (Not Found)
+ * Exibida automaticamente pelo Next.js quando uma rota não é encontrada.
+ */
 const NotFound: NextPage = () => {
   return (
     <>
@@ -22,7 +27,7 @@ const NotFound: NextPage = () => {
         </p>
         <Link
           href="/"
-          className={`${roboto.className} p-4 bg-h-blue-500 rounded-xl text-black mt-5 md:mt-12 md:text-xl w-fit`}
+          className={`${roboto.className} p-4 bg-h-blue-500 rounded-xl text-black mt-5 md:mt-12 md:text-xl w-fit hover:brightness-110 transition-all`}
         >
           Go to Home Page
         </Link>

@@ -14,6 +14,10 @@ interface FormErrors {
   message?: string;
 }
 
+/**
+ * Componente de Formulário de Contato
+ * Gerencia validação, estados de envio e integração com Netlify Forms e Mailchimp.
+ */
 export const ContactForm = () => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState<FormData>({
@@ -25,10 +29,14 @@ export const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  /**
+   * Valida os campos do formulário antes do envio.
+   * Retorna 'true' se válido, 'false' caso contrário.
+   */
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
-    // Validação do Nome
+    // Validação do Nome: Obrigatório, sem números e caracteres válidos
     if (!formData.name.trim()) {
       newErrors.name = t('contact.errors.nameRequired') || 'Nome é obrigatório';
     } else if (/\d/.test(formData.name)) {
@@ -37,14 +45,14 @@ export const ContactForm = () => {
       newErrors.name = t('contact.errors.nameInvalidChars') || 'Nome contém caracteres inválidos';
     }
 
-    // Validação do Email
+    // Validação do Email: Obrigatório e formato válido regex
     if (!formData.email.trim()) {
       newErrors.email = t('contact.errors.emailRequired') || 'Email é obrigatório';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = t('contact.errors.emailInvalid') || 'Email inválido';
     }
 
-    // Validação da Mensagem
+    // Validação da Mensagem: Obrigatória e limite de caracteres
     if (!formData.message.trim()) {
       newErrors.message = t('contact.errors.messageRequired') || 'Mensagem é obrigatória';
     } else if (formData.message.trim().length > 500) {
@@ -59,7 +67,7 @@ export const ContactForm = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Validar email em tempo real
+    // Validar email em tempo real para feedback rápido
     if (name === 'email' && value.length > 0) {
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
         setErrors(prev => ({ ...prev, email: t('contact.errors.emailInvalid') || 'Email inválido' }));
@@ -67,11 +75,10 @@ export const ContactForm = () => {
         setErrors(prev => ({ ...prev, email: undefined }));
       }
     } else if (name === 'email' && value.length === 0) {
-      // Limpar erro quando campo estiver vazio
       setErrors(prev => ({ ...prev, email: undefined }));
     }
     
-    // Clear error when user starts typing (outros campos)
+    // Limpar erros de outros campos ao digitar
     if (name !== 'email' && errors[name as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
@@ -87,7 +94,8 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // 1. Enviar dados para Netlify Forms (notificação por email)
+      // 1. Enviar dados para Netlify Forms (Garante o recebimento de notificações)
+      // Formato 'application/x-www-form-urlencoded' é padrão para formulários HTML simples
       const netlifyResponse = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -99,7 +107,8 @@ export const ContactForm = () => {
         }).toString()
       });
 
-      // 2. Adicionar contato ao Mailchimp (executar em paralelo, não bloquear o envio)
+      // 2. Adicionar contato ao Mailchimp (Opcional - Executado em paralelo)
+      // Chama uma função serverless para interagir com a API do Mailchimp
       fetch('/.netlify/functions/mailchimp-subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -131,6 +140,7 @@ export const ContactForm = () => {
     }
   };
 
+  // Renderização da Tela de Sucesso
   if (isSubmitted) {
     return (
       <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
@@ -157,6 +167,7 @@ export const ContactForm = () => {
     );
   }
 
+  // Renderização do Formulário
   return (
     <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">

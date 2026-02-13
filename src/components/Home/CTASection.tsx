@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
 import ctaData from '../../../content/data/cta.json';
 
+/**
+ * Seção de Chamada para Ação (CTA)
+ * Exibe título, descrição e botão principal de ação, além de links de contato rápido.
+ */
 export const CTASection = () => {
   const { t } = useLanguage();
 
@@ -24,6 +28,7 @@ export const CTASection = () => {
           {t('home.cta.button')} →
         </Link>
 
+        {/* Links Adicionais de Contato */}
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-700 dark:text-white">
           {ctaData.cta.contacts.map((contact) => {
             if (contact.type === 'email' && contact.translationKey) {
@@ -63,4 +68,3 @@ export const CTASection = () => {
     </section>
   );
 };
-

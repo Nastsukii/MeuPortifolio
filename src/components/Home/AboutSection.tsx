@@ -4,6 +4,10 @@ import Image from 'next/image';
 import { trackEvent } from '@/lib/analytics';
 import aboutData from '../../../content/data/about.json';
 
+/**
+ * Seção Sobre (Homepage)
+ * Apresentação breve com foto e link para página completa de Sobre.
+ */
 export const AboutSection = () => {
   const { t } = useLanguage();
   const { photo, link } = aboutData.about;
@@ -18,14 +22,14 @@ export const AboutSection = () => {
               alt={photo.alt}
               width={photo.width}
               height={photo.height}
-              className="rounded-2xl shadow-2xl"
+              className="rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="md:w-2/3">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               {t('home.about.title')}
             </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed text-justify">
               {t('home.about.description')}
             </p>
             <Link
@@ -44,4 +48,3 @@ export const AboutSection = () => {
     </section>
   );
 };
-

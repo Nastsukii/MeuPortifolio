@@ -1,5 +1,8 @@
 import React, { SVGProps } from 'react';
 
+/**
+ * Ícone de Menu (Hambúrguer)
+ */
 export const MenuIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg

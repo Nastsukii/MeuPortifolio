@@ -4,6 +4,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { trackEvent } from '@/lib/analytics';
 import heroData from '../../../content/data/hero.json';
 
+/**
+ * Seção Hero (Página Inicial)
+ * Apresentação principal com foto, título, subtítulo e CTAs.
+ */
 export const Inicio = () => {
   const { t } = useLanguage();
   const { badge, photo } = heroData.hero;
@@ -12,7 +16,7 @@ export const Inicio = () => {
     <section className="flex py-12 overflow-hidden lg:items-center lg:min-h-[90vh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
         <div className="flex flex-col lg:flex-row justify-center items-start lg:items-center gap-6 lg:gap-20 py-8 lg:py-0">
-          {/* Photo - First on mobile and desktop */}
+          {/* Foto Principal */}
           <div className="w-full flex justify-center mb-6 lg:w-auto lg:order-2 lg:mb-0">
             <div className="relative w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] lg:w-[400px] lg:h-[400px]">
               <div className="w-full h-full relative">
@@ -28,7 +32,7 @@ export const Inicio = () => {
             </div>
           </div>
 
-          {/* Content - Second on mobile */}
+          {/* Conteúdo Textual */}
           <div className="flex-1 text-center lg:text-left lg:order-1">
             <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight">
               <span className="particle-text block text-gray-600 dark:text-gray-300 text-xl sm:text-3xl font-medium mb-1 sm:mb-2">
@@ -43,6 +47,7 @@ export const Inicio = () => {
               {t('home.subtitle')}
             </p>
 
+            {/* CTAs */}
             <div className="particle-text-delay-3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Link
                 href="/contato"
@@ -60,6 +65,7 @@ export const Inicio = () => {
               </Link>
             </div>
 
+            {/* Badge Tech */}
             <div className="particle-fade-delay-2 inline-flex items-center gap-3 px-6 py-3 bg-primary/10 dark:bg-primary/20 rounded-full">
               {badge.icon && <span className="text-3xl">{badge.icon}</span>}
               <div className="text-left">

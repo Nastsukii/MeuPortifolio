@@ -1,6 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import statsData from '../../../content/data/stats.json';
 
+/**
+ * Seção de Estatísticas
+ * Exibe números de impacto (counter) na página inicial.
+ */
 export const StatsSection = () => {
   const { t } = useLanguage();
 
@@ -27,4 +31,3 @@ export const StatsSection = () => {
     </section>
   );
 };
-

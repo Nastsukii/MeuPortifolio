@@ -16,8 +16,13 @@ const projects = [
     }
   },
   // Adicione os demais projetos aqui
+// Adicione os demais projetos aqui
 ];
 
+/**
+ * @deprecated Este componente parece não ser usado. A página inicial usa FeaturedProjects.tsx.
+ * Manter por precaução ou remover futuramente.
+ */
 export const Projects = ({ projects }: ProjectsProps) => {
   return (
     <article className="space-y-16 flex flex-col items-center xl:items-start text-center xl:text-left">

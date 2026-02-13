@@ -1,5 +1,9 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 
+/**
+ * Componente de Prova Social
+ * Exibe estatísticas (Projetos, Experiência, Tecnologias) para aumentar a credibilidade.
+ */
 export const SocialProof = () => {
   const { t } = useLanguage();
 
@@ -35,6 +39,7 @@ export const SocialProof = () => {
           </h2>
         </div>
         
+        {/* Grid de Estatísticas */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
@@ -49,7 +54,7 @@ export const SocialProof = () => {
           ))}
         </div>
 
-        {/* Testimonials Section */}
+        {/* Testimonials Section (Placeholder) */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             {t('socialProof.testimonials.title')}
