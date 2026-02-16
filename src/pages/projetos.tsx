@@ -249,6 +249,10 @@ interface ProjetosProps {
 // COMPONENT
 // ============================================================================
 
+// Cast icons to avoid type errors with React 18
+const InfoIcon = FaInfoCircle as React.ElementType;
+const ExternalLinkIcon = FaExternalLinkAlt as React.ElementType;
+
 const Projetos = ({ businessSettings }: ProjetosProps) => {
   const { t } = useLanguage();
 
@@ -309,7 +313,7 @@ const Projetos = ({ businessSettings }: ProjetosProps) => {
                     <ButtonGroup>
                       <Link href={`/projeto/${projeto.slug}`} passHref legacyBehavior>
                          <ActionButton className="primary">
-                          <FaInfoCircle /> Mais Informações
+                          <InfoIcon /> Mais Informações
                         </ActionButton>
                       </Link>
                       
@@ -319,7 +323,7 @@ const Projetos = ({ businessSettings }: ProjetosProps) => {
                         rel="noopener noreferrer" 
                         className="secondary"
                       >
-                         <FaExternalLinkAlt /> Visitar
+                         <ExternalLinkIcon /> Visitar
                       </ActionButton>
                     </ButtonGroup>
                   </DetailedOverlay>

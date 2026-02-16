@@ -241,6 +241,13 @@ interface ProjectProps {
   businessSettings: any;
 }
 
+// Cast icons to avoid type errors with React 18
+const ArrowLeftIcon = FaArrowLeft as React.ElementType;
+const CalendarIcon = FaCalendarAlt as React.ElementType;
+const CodeIcon = FaCode as React.ElementType;
+const ExternalLinkIcon = FaExternalLinkAlt as React.ElementType;
+// const GithubIcon = FaGithub as React.ElementType; // Unused
+
 const ProjectPage = ({ project, businessSettings }: ProjectProps) => {
   const router = useRouter();
 
@@ -262,7 +269,7 @@ const ProjectPage = ({ project, businessSettings }: ProjectProps) => {
         <Header>
           <Link href="/projetos" passHref legacyBehavior>
             <BackButton>
-              <FaArrowLeft /> Voltar para Projetos
+              <ArrowLeftIcon /> Voltar para Projetos
             </BackButton>
           </Link>
         </Header>
@@ -272,10 +279,10 @@ const ProjectPage = ({ project, businessSettings }: ProjectProps) => {
             <Title>{project.title}</Title>
             <MetaInfo>
               <InfoItem>
-                <FaCalendarAlt /> {project.year}
+                <CalendarIcon /> {project.year}
               </InfoItem>
               <InfoItem>
-                <FaCode /> {project.role}
+                <CodeIcon /> {project.role}
               </InfoItem>
             </MetaInfo>
           </ProjectHeader>
@@ -319,7 +326,7 @@ const ProjectPage = ({ project, businessSettings }: ProjectProps) => {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <ActionButton href={project.link} target="_blank" className="primary">
-                  <FaExternalLinkAlt /> Visitar Site
+                  <ExternalLinkIcon /> Visitar Site
                 </ActionButton>
                 {/* 
                   Se houvesse repo link:

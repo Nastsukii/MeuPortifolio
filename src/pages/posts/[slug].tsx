@@ -10,8 +10,10 @@ import { CustomSignInButton } from "@/components/commons/clerk/SignInButton";
 import dynamic from 'next/dynamic';
 
 // Importar componentes do Clerk dinamicamente para evitar erros de hidratação (SSR vs Client)
+// Clerk types definition issue
 // @ts-expect-error - Clerk types definition issue
 const SignedIn = dynamic(() => import("@clerk/nextjs").then((mod) => mod.SignedIn), { ssr: false });
+// Clerk types definition issue
 // @ts-expect-error - Clerk types definition issue
 const SignedOut = dynamic(() => import("@clerk/nextjs").then((mod) => mod.SignedOut), { ssr: false });
 
@@ -69,9 +71,9 @@ const Post = ({ postData }: PostProps) => {
                 remarkPlugins={[remarkGfm]}
                 components={{
                   img: ImageRenderer,
-                  p: ({ node, ...props }) => {
+                  p: ({ node, ...props }: any) => {
                     // Se o parágrafo contém apenas uma imagem, renderizar como div para evitar aninhamento inválido de <p>
-                    if (node.children.length === 1 && node.children[0].type === 'image') {
+                    if (node && node.children && node.children.length === 1 && node.children[0].type === 'image') {
                       return <ImageRenderer {...(node.children[0].props || {})} />;
                     }
                     return <ParagraphRenderer {...props} />;
@@ -117,8 +119,8 @@ const Post = ({ postData }: PostProps) => {
                       remarkPlugins={[remarkGfm]}
                       components={{
                         img: ImageRenderer,
-                        p: ({ node, ...props }) => {
-                          if (node.children.length === 1 && node.children[0].type === 'image') {
+                        p: ({ node, ...props }: any) => {
+                          if (node && node.children && node.children.length === 1 && node.children[0].type === 'image') {
                             return <ImageRenderer {...(node.children[0].props || {})} />; 
                           }
                           return <ParagraphRenderer {...props} />;
