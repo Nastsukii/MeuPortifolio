@@ -2,7 +2,10 @@ import { OptimizedImage } from '@/components/commons/OptimizedImage';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { trackEvent } from '@/lib/analytics';
+// Importa dados do arquivo JSON local
 import heroData from '../../../content/data/hero.json';
+// Importa ícone de graduação da biblioteca react-icons
+import { FaGraduationCap } from 'react-icons/fa';
 
 /**
  * Seção Hero (Página Inicial)
@@ -11,6 +14,7 @@ import heroData from '../../../content/data/hero.json';
 export const Inicio = () => {
   const { t } = useLanguage();
   const { badge, photo } = heroData.hero;
+  const GraduationIcon = FaGraduationCap as any;
 
   return (
     <section className="flex py-12 overflow-hidden lg:items-center lg:min-h-[90vh]">
@@ -63,6 +67,42 @@ export const Inicio = () => {
               >
                 {t('cta.viewProjects')}
               </Link>
+            </div>
+
+            {/* Seção de Formação Acadêmica - Adicionada conforme solicitado */}
+            <div className="particle-text-delay-4 mb-8 w-full">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <GraduationIcon className="text-primary text-2xl" />
+                Formação Acadêmica
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Item 1: Unível */}
+                <div className="bg-white/50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary/50 transition-colors shadow-sm">
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100 text-sm md:text-base">TADS - Superior</h4>
+                  <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Tecnologia em Análise e Desenvolvimento de Sistemas
+                  </p>
+                  <span className="text-xs font-semibold text-primary mt-2 block">Unível - Cascavel PR</span>
+                </div>
+
+                {/* Item 2: CEEP */}
+                <div className="bg-white/50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary/50 transition-colors shadow-sm">
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100 text-sm md:text-base">Técnico</h4>
+                  <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Desenvolvimento de Sistemas
+                  </p>
+                  <span className="text-xs font-semibold text-primary mt-2 block">CEEP - Cascavel PR</span>
+                </div>
+
+                {/* Item 3: DevClub */}
+                <div className="bg-white/50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary/50 transition-colors shadow-sm">
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100 text-sm md:text-base">Full-Stack Starter</h4>
+                  <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Formação Web Full-Stack
+                  </p>
+                  <span className="text-xs font-semibold text-primary mt-2 block">DevClub</span>
+                </div>
+              </div>
             </div>
 
             {/* Badge Tech */}

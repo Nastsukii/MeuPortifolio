@@ -1,85 +1,117 @@
 {
-  "titleEmoji": "",
+  "titleEmoji": "💻",
   "technologies": [
-    {
-      "id": "nextjs",
-      "nameKey": "home.technologies.nextjs",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-black dark:border-white text-gray-900 dark:text-white"
-    },
-    {
-      "id": "openai",
-      "nameKey": "home.technologies.openai",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-green-600 text-gray-900 dark:text-white"
-    },
     {
       "id": "typescript",
       "nameKey": "home.technologies.typescript",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-blue-600 text-gray-900 dark:text-white"
+      "category": "frontend",
+      "icon": "SiTypescript",
+      "color": "bg-blue-50 dark:bg-blue-900/10 border-blue-500 dark:border-blue-700",
+      "iconColor": "text-blue-600 dark:text-blue-400"
     },
     {
       "id": "react",
       "nameKey": "home.technologies.react",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-cyan-500 text-gray-900 dark:text-white"
+      "category": "frontend",
+      "icon": "SiReact",
+      "color": "bg-cyan-50 dark:bg-cyan-900/10 border-cyan-500 dark:border-cyan-700",
+      "iconColor": "text-cyan-500 dark:text-cyan-400"
     },
     {
       "id": "javascript",
       "nameKey": "home.technologies.javascript",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-yellow-500 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "mongodb",
-      "nameKey": "home.technologies.mongodb",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-green-500 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "postgresql",
-      "nameKey": "home.technologies.postgresql",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-blue-400 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "sqlserver",
-      "nameKey": "home.technologies.sqlserver",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-red-600 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "nodejs",
-      "nameKey": "home.technologies.nodejs",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-green-500 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "netlify",
-      "nameKey": "home.technologies.netlify",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-teal-500 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "vercel",
-      "nameKey": "home.technologies.vercel",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-black dark:border-white text-gray-900 dark:text-white"
-    },
-    {
-      "id": "python",
-      "nameKey": "home.technologies.python",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-yellow-400 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "express",
-      "nameKey": "home.technologies.express",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-gray-500 text-gray-900 dark:text-white"
+      "category": "frontend",
+      "icon": "SiJavascript",
+      "color": "bg-yellow-50 dark:bg-yellow-900/10 border-yellow-500 dark:border-yellow-700",
+      "iconColor": "text-yellow-500 dark:text-yellow-400"
     },
     {
       "id": "html5",
       "nameKey": "home.technologies.html5",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-orange-500 text-gray-900 dark:text-white"
+      "category": "frontend",
+      "icon": "SiHtml5",
+      "color": "bg-orange-50 dark:bg-orange-900/10 border-orange-500 dark:border-orange-700",
+      "iconColor": "text-orange-600 dark:text-orange-500"
     },
     {
       "id": "css3",
       "nameKey": "home.technologies.css3",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-blue-500 text-gray-900 dark:text-white"
+      "category": "frontend",
+      "icon": "SiCss3",
+      "color": "bg-blue-50 dark:bg-blue-900/10 border-blue-500 dark:border-blue-600",
+      "iconColor": "text-blue-600 dark:text-blue-400"
+    },
+    {
+      "id": "nodejs",
+      "nameKey": "home.technologies.nodejs",
+      "category": "backend",
+      "icon": "SiNodedotjs",
+      "color": "bg-green-50 dark:bg-green-900/10 border-green-500 dark:border-green-700",
+      "iconColor": "text-green-600 dark:text-green-500"
+    },
+    {
+      "id": "express",
+      "nameKey": "home.technologies.express",
+      "category": "backend",
+      "icon": "SiExpress",
+      "color": "bg-gray-50 dark:bg-gray-800/50 border-gray-400 dark:border-gray-600",
+      "iconColor": "text-gray-700 dark:text-gray-300"
+    },
+    {
+      "id": "mongodb",
+      "nameKey": "home.technologies.mongodb",
+      "category": "backend",
+      "icon": "SiMongodb",
+      "color": "bg-green-50 dark:bg-green-900/10 border-green-500 dark:border-green-700",
+      "iconColor": "text-green-600 dark:text-green-500"
+    },
+    {
+      "id": "postgresql",
+      "nameKey": "home.technologies.postgresql",
+      "category": "backend",
+      "icon": "SiPostgresql",
+      "color": "bg-blue-50 dark:bg-blue-900/10 border-blue-400 dark:border-blue-600",
+      "iconColor": "text-blue-500 dark:text-blue-400"
+    },
+    {
+      "id": "sqlserver",
+      "nameKey": "home.technologies.sqlserver",
+      "category": "backend",
+      "icon": "SiMicrosoftsqlserver",
+      "color": "bg-red-50 dark:bg-red-900/10 border-red-500 dark:border-red-700",
+      "iconColor": "text-red-600 dark:text-red-500"
     },
     {
       "id": "c",
       "nameKey": "home.technologies.c",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-blue-700 text-gray-900 dark:text-white"
+      "category": "backend",
+      "icon": "SiC",
+      "color": "bg-indigo-50 dark:bg-indigo-900/10 border-indigo-500 dark:border-indigo-700",
+      "iconColor": "text-indigo-600 dark:text-indigo-400"
+    },
+    {
+      "id": "openai",
+      "nameKey": "home.technologies.openai",
+      "category": "backend",
+      "icon": "SiOpenai",
+      "color": "bg-emerald-50 dark:bg-emerald-900/10 border-emerald-500 dark:border-emerald-700",
+      "iconColor": "text-emerald-600 dark:text-emerald-500"
+    },
+     {
+      "id": "netlify",
+      "nameKey": "home.technologies.netlify",
+      "category": "backend",
+      "icon": "SiNetlify",
+      "color": "bg-teal-50 dark:bg-teal-900/10 border-teal-500 dark:border-teal-700",
+      "iconColor": "text-teal-600 dark:text-teal-400"
+    },
+    {
+      "id": "vercel",
+      "nameKey": "home.technologies.vercel",
+      "category": "backend",
+      "icon": "SiVercel",
+      "color": "bg-gray-50 dark:bg-gray-800/50 border-gray-900 dark:border-gray-100",
+      "iconColor": "text-gray-900 dark:text-white"
     }
   ]
 }
