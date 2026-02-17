@@ -105,18 +105,11 @@ export const Inicio = () => {
               </div>
             </div>
 
-            {/* Badge Tech */}
-            <div className="particle-fade-delay-2 inline-flex items-center gap-3 px-6 py-3 bg-primary/10 dark:bg-primary/20 rounded-full">
-              {badge.icon && <span className="text-3xl">{badge.icon}</span>}
-              <div className="text-left">
-                <p className="text-sm font-semibold text-primary">
-                  {t(badge.textKey)}
-                </p>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
     </section>
   );
 };
+
