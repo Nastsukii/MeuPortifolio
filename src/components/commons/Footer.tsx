@@ -159,10 +159,10 @@ export const Footer = ({ className = "" }: FooterProps) => {
               </p>
               <p className="text-gray-600 dark:text-gray-300">
                 <a 
-                  href="mailto:comiranbueno0@gmail.com" 
+                  href="mailto:lacb.lzn.luiz@gmail.com" 
                   className="hover:text-primary transition-colors duration-200"
                 >
-                  comiranbueno0@gmail.com
+                  lacb.lzn.luiz@gmail.com
                 </a>
               </p>
             </div>
