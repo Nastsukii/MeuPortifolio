@@ -6,10 +6,13 @@ interface GreenBeamCardProps {
   beamColor?: string;
 }
 
+<<<<<<< HEAD
 /**
  * GreenBeamCard Component
  * Wraps content in a card with a rotating green beam border effect.
  */
+=======
+>>>>>>> Refatoring
 export const GreenBeamCard = ({ children, className = '', beamColor = '#22c55e' }: GreenBeamCardProps) => {
   return (
     <div className={`relative overflow-hidden rounded-xl p-[2px] group ${className}`}>

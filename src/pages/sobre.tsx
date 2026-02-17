@@ -1,6 +1,5 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
@@ -8,18 +7,11 @@ import { PageSection } from '@/components/commons/PageSection';
 import { GreenBeamCard } from '@/components/commons/GreenBeamCard';
 import { TechStack } from '@/components/Home/TechStack';
 
-/**
- * Interface das propriedades da página Sobre
- */
 interface SobreProps {
   businessSettings: any;
   generalSettings: any;
 }
 
-/**
- * Componente da Página Sobre Mim
- * Apresenta informações detalhadas sobre a carreira, formação, serviços e habilidades do desenvolvedor.
- */
 const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
   const { t } = useLanguage();
   
@@ -114,7 +106,11 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                         <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                           TADS - Superior
                         </h4>
+<<<<<<< HEAD
                         <p className="primary font-medium mb-4">Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+=======
+                        <p className="text-primary font-medium mb-4">Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+>>>>>>> Refatoring
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
                           <li className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
