@@ -104,5 +104,19 @@ export const projectsData: ProjectData[] = [
     story: "Queria aprender a clonar interfaces de sites e aplicações. Foi um exercício de criatividade e design UI/UX, focado em criar uma atmosfera e uma marca através do código e do estilo visual.",
     year: 2026,
     role: "UI/UX Designer & Dev"
-  }
+  },
+  {
+    id: 8,
+    slug: "LandingPageClothingStore",
+    title: "Landing Page para Lojas",
+    link: "https://landing-page-clothing-store.vercel.app/",
+    tecnologias: ["React.js", "Node.js", "Vercel"],
+    funcionalidades: ["Landing Page", "Design Responsivo", "Estrutura para converão de vendas"],
+    description: "Langing page de lojas de roupas e acessorios",
+    fullDescription: "Esta tela tem como Objetivo treinar minhas habilidades e tambem criar uma landing page de alta conversão para lojas de roupas e poder vender para ajudar pequenas lojas",
+    story: "Eu decidi criar essa landing page depois de perceber quantos pequenos negócios têm potencial, mas não conseguem transformar visitantes em clientes por falta de uma presença digital estratégica. Quis construir algo que fosse além de um site bonito — uma página pensada para gerar conexão, transmitir profissionalismo e, principalmente, converter. Esse projeto representa minha evolução como desenvolvedor: unir tecnologia com visão de negócio para criar soluções que realmente fazem diferença.",
+    year: 2026,
+    role: "Desenvolvedor Web"
+  },
+   
 ];
