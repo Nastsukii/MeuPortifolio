@@ -118,5 +118,18 @@ export const projectsData: ProjectData[] = [
     year: 2026,
     role: "Desenvolvedor Web"
   },
+  {
+    id: 9,
+    slug: "sistema-loja-de-roupas",
+    title: "Sistema Loja de Roupas",
+    link: "https://sistema-loja-de-roupas.vercel.app/",
+    tecnologias: ["React", "Vite", "JavaScript", "CSS", "Axios", "Node.js", "Express.js", "MongoDB", "JWT"],
+    funcionalidades: ["Autenticacao com JWT", "Permissoes de usuario e administrador", "CRUD de produtos", "Controle de estoque", "Catalogo responsivo"],
+    description: "Sistema full-stack de e-commerce para gerenciamento e venda de roupas.",
+    fullDescription: "O Sistema Loja de Roupas e uma aplicacao web completa para gerenciar uma loja virtual de roupas. A plataforma combina um frontend moderno em React com Vite e uma estrutura backend em Node.js, Express.js e MongoDB, oferecendo recursos para cadastro de usuarios, autenticacao, listagem de produtos, controle de estoque e administracao do catalogo.",
+    story: "Este projeto foi criado para consolidar uma solucao de e-commerce mais completa, indo alem de uma vitrine simples. A ideia foi construir um sistema com separacao clara entre cliente e servidor, autenticar usuarios com JWT e permitir que administradores gerenciem produtos, imagens, categorias e estoque em uma interface responsiva.",
+    year: 2026,
+    role: "Desenvolvedor Full Stack"
+  },
    
 ];
